@@ -1,18 +1,21 @@
 /**
- *
- * メタボールトライアル（without three.js)
+ * メタボール
  * 2019.12.30
- *
  */
 
 var canvas = document.getElementById("main");
 var gl = canvas.getContext('webgl');
 
+var NUM_METABALLS = 9;
+var WIDTH = canvas.width;
+var HEIGHT = canvas.height;
+var frameCount = 0.0; // eslint-disable-line
+
 /**
  * Shaders
  */
 
-// Utility to fail loudly on shader compilation failure
+// シェーダをコンパイルする関数
 function compileShader(shaderSource, shaderType) {
     var shader = gl.createShader(shaderType);
     gl.shaderSource(shader, shaderSource);
@@ -25,8 +28,10 @@ function compileShader(shaderSource, shaderType) {
     return shader;
 }
 
+// vertex shader
 var vertexShader = compileShader('\n\
 attribute vec2 position;\n\
+varying vec2 vUv;\n\
 \n\
 void main() {\n\
     // position specifies only x and y.\n\
@@ -35,11 +40,39 @@ void main() {\n\
 }\
 ', gl.VERTEX_SHADER);
 
+// fragment shader
 var fragmentShader = compileShader('\n\
+precision highp float;\n\
+uniform vec3 metaballs[' + NUM_METABALLS + '];\n\
+const float WIDTH = ' + WIDTH + '.0;\n\
+const float HEIGHT = ' + HEIGHT + '.0;\n\
+varying vec2 vUv;\n\
 \n\
 void main(){\n\
-    // Draw every pixel red.\n\
-    gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);\n\
+    float x = gl_FragCoord.x;\n\
+    float y = gl_FragCoord.y;\n\
+    float v = 0.0;\n\
+    for (int i = 0; i < ' + NUM_METABALLS + '; i++) {\n\
+        vec3 mb = metaballs[i];\n\
+        float dx = mb.x - x;\n\
+        float dy = mb.y - y;\n\
+        float r = mb.z;\n\
+        v += r*r/(dx*dx + dy*dy);\n\
+    }\n\
+    if (v > 1.0) {\n\
+      float speed = 0.1;\n\
+      vec2 o = vec2(sin(length(vUv) - WIDTH * 0.5* speed), cos(length(vUv) - WIDTH * 0.5 * speed));\n\
+      vec2 ux = vUv + vec2(1.5, 4.5);\n\
+      vec2 d = vec2(sin(length(ux) - WIDTH * 0.5 * speed), cos(length(ux) - WIDTH * 0.5 * speed));\n\
+      vec2 uy = vUv + vec2(-1.5, -WIDTH * 0.5);\n\
+      vec2 l = vec2(sin(length(uy) - WIDTH * 0.5 * speed), cos(length(uy) - WIDTH * 0.5 * speed));\n\
+      \n\
+      vec2 c = o * d * l + vec2(0.4, 0.8);\n\
+      \n\
+      gl_FragColor = vec4(vec3( c, 1.0 ), 1.0);\n\
+    } else {\n\
+        gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);\n\
+    }\n\
 }\n\
 ', gl.FRAGMENT_SHADER);
 
@@ -88,8 +121,8 @@ function getAttribLocation(program, name) {
     return attributeLocation;
 }
 
-// To make the geometry information available in the shader as attributes, we
-// need to tell WebGL what the layout of our data in the vertex buffer is.
+// シェーダーでジオメトリ情報を属性として利用できるようにするには、
+// 頂点バッファ内のデータのレイアウトをwebglに伝える必要がある
 var positionHandle = getAttribLocation(program, 'position');
 gl.enableVertexAttribArray(positionHandle);
 gl.vertexAttribPointer(positionHandle,
@@ -101,9 +134,80 @@ gl.vertexAttribPointer(positionHandle,
                        );
 
 /**
- * Draw
+ * Simulation setup
  */
 
-// Render the 4 vertices specified above (starting at index 0)
-// in TRIANGLE_STRIP mode.
-gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+var metaballs = [];
+
+for (var i = 0; i < NUM_METABALLS; i++) {
+  var radius = Math.random() * 60 + 10;
+  metaballs.push({
+    x: Math.random() * (WIDTH - 2 * radius) + radius,
+    y: Math.random() * (HEIGHT - 2 * radius) + radius,
+    vx: Math.random() * 10 - 5,
+    vy: Math.random() * 10 - 5,
+    r: radius
+  });
+}
+
+/**
+ * Uniform setup
+ */
+
+// Utility to complain loudly if we fail to find the uniform
+function getUniformLocation(program, name) {
+    var uniformLocation = gl.getUniformLocation(program, name);
+    if (uniformLocation === -1) {
+        throw 'Can not find uniform ' + name + '.';
+    }
+    return uniformLocation;
+}
+var metaballsHandle = getUniformLocation(program, 'metaballs');
+
+/**
+ * シミュレーション手順、データ転送、描画
+ * 毎フレーム描画
+ */
+
+var step = function() {
+  frameCount += 0.01
+  // Update positions and speeds
+  for (var i = 0; i < NUM_METABALLS; i++) {
+    var mb = metaballs[i];
+
+    mb.x += mb.vx;
+    if (mb.x - mb.r < 0) {
+      mb.x = mb.r + 1;
+      mb.vx = Math.abs(mb.vx);
+    } else if (mb.x + mb.r > WIDTH) {
+      mb.x = WIDTH - mb.r;
+      mb.vx = -Math.abs(mb.vx);
+    }
+    mb.y += mb.vy;
+    if (mb.y - mb.r < 0) {
+      mb.y = mb.r + 1;
+      mb.vy = Math.abs(mb.vy);
+    } else if (mb.y + mb.r > HEIGHT) {
+      mb.y = HEIGHT - mb.r;
+      mb.vy = -Math.abs(mb.vy);
+    }
+  }
+
+  // データをGPUに送信するには、最初に
+  // データを単一の配列にフラット化する
+  var dataToSendToGPU = new Float32Array(3 * NUM_METABALLS);
+  for (var j = 0; j < NUM_METABALLS; j++) {
+    var baseIndex = 3 * j;
+    var mb1 = metaballs[j];
+    dataToSendToGPU[baseIndex + 0] = mb1.x;
+    dataToSendToGPU[baseIndex + 1] = mb1.y;
+    dataToSendToGPU[baseIndex + 2] = mb1.r;
+  }
+  gl.uniform3fv(metaballsHandle, dataToSendToGPU);
+
+  gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+
+  requestAnimationFrame(step);
+};
+
+step();
