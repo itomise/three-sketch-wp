@@ -1,0 +1,10 @@
+extends ./templates/_layout
+
+block variables
+  -
+    var title = 'トップ';
+    var description = '説明';
+
+block content
+  #js-container
+  canvas#main(width=500 height=400)

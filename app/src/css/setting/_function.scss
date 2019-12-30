@@ -1,0 +1,30 @@
+// media query
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// vw に変換 ( pc )
+@function _vwPc($size, $viewport:$campusSize-pc){
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+// vw に変換 ( sp )
+@function _vw($size, $viewport:$campusSize-sp){
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+// フォントサイズをvwにする ( pc )
+@mixin ftb($font_size:10) {
+  font-size: $font_size * 1px;
+  font-size: get_vw($font_size, $campusSize-pc);
+}
+
+// フォントサイズをvwにする ( sp )
+@mixin fsp($font_size:10){
+  font-size: $font_size * 1px;
+  font-size: get_vw($font_size, $campusSize-sp);
+}

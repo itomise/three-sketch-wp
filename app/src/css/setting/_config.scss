@@ -1,0 +1,23 @@
+@charset 'utf-8';
+
+$breakPoint-sp: 749px;
+$breakPoint-pc: 750px;
+
+$campusSize-sp: 750;
+$campusSize-pc: 1440;
+
+$rootPath: 'public/';
+$imgPath: '../materials/';
+
+$maxPcWidth: 100%;
+$maxTabletWidth: 1280px;
+
+$breakpoints: (
+  'sm': 'screen and (max-width: #{$breakPoint-sp})',
+  'md': 'screen and (min-width: #{$breakPoint-pc}) and (max-width: #{$maxTabletWidth})',
+  'lg': 'screen and (min-width: #{$breakPoint-pc})',
+) !default;
+
+$line-height-sp: 180%;
+$line-height-pc: 135%;
+
