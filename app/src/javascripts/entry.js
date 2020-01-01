@@ -7,7 +7,9 @@ import '../css/base.scss'
 
 // import './postProcess-trial01'
 
-import './metaballs'
+// import './metaballs'
+
+import './postProcess-trial02'
 
 // pugをインポートする
 const req = require.context('../pug/', false, /\.pug/);
