@@ -73,7 +73,7 @@ const init = () => {
   // composer.addPass( effect );
   var effect1 = new ShaderPass( RGBShiftShader );
   effect1.uniforms[ 'amount' ].value = 0.01;
-  // composer.addPass( effect1 );
+  composer.addPass( effect1 );
   //
   window.addEventListener( 'resize', onWindowResize, false );
 }

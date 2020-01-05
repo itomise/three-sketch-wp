@@ -7,6 +7,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "gsap": "^3.0.4",
     "postprocessing": "^6.9.0",
     "reset-css": "^4.0.1",
     "three": "^0.112.0"
