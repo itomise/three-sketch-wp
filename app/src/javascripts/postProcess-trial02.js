@@ -73,9 +73,14 @@ const init = () => {
   effect.uniforms[ 'scale' ].value = 7
   // composer.addPass( effect );
   var effect1 = new ShaderPass( RGBShiftShader );
+<<<<<<< HEAD
   effect1.uniforms[ 'amount' ].value = Math.random() * 0.1
   effect1.uniforms[ 'angle' ].value = Math.random() * 0.5
   // composer.addPass( effect1 );
+=======
+  effect1.uniforms[ 'amount' ].value = 0.01;
+  composer.addPass( effect1 );
+>>>>>>> b1fdccaa07ee5efed7dc178e6d67454bc9cd9dfb
   //
   window.addEventListener( 'resize', onWindowResize, false );
 
