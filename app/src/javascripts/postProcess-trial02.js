@@ -14,6 +14,7 @@ import { EffectComposer } from '../materials/postProcess01/EffectComposer'
 // カメラ、シーン等の宣言
 var camera, scene, renderer, composer;
 var object, light;
+var raycaster, mouse; // eslint-disable-line
 
 document.addEventListener('DOMContentLoaded', () => {
   init();
@@ -72,10 +73,17 @@ const init = () => {
   effect.uniforms[ 'scale' ].value = 7
   // composer.addPass( effect );
   var effect1 = new ShaderPass( RGBShiftShader );
-  effect1.uniforms[ 'amount' ].value = 0.01;
+  effect1.uniforms[ 'amount' ].value = Math.random() * 0.1
+  effect1.uniforms[ 'angle' ].value = Math.random() * 0.5
   // composer.addPass( effect1 );
   //
   window.addEventListener( 'resize', onWindowResize, false );
+
+  mouse = new THREE.Vector2()
+
+  raycaster = new THREE.Raycaster()
+
+  // raycaster.setFromCamera()
 }
 function onWindowResize() {
   camera.aspect = window.innerWidth / window.innerHeight;

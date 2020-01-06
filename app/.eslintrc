@@ -11,5 +11,10 @@
     "jquery": true
   },
   "globals": {
-  }
+    // "THREE": true,
+    // "TweenMax": true,
+    // "Elastic": true,
+    // "Back": true,
+    // "dat": true
+  },
 }
