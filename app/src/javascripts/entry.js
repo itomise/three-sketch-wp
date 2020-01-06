@@ -11,13 +11,13 @@ import '../css/base.scss'
 
 // import './postProcess-trial02'
 
-<<<<<<< HEAD
 // import './effectsStereo'
 
-import './cameraArray'
-=======
-import './intarakai01'
->>>>>>> b1fdccaa07ee5efed7dc178e6d67454bc9cd9dfb
+// import './cameraArray'
+
+// import './intarakai01'
+
+import './intarakai02'
 
 // pugをインポートする
 const req = require.context('../pug/', false, /\.pug/);
