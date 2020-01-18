@@ -86,6 +86,12 @@ const webpack_config = {
         from: './favicon.ico',
         to: './'
       }
+    ]),
+    new CopyPlugin([
+      {
+        from: './src/materials/cubemap/texture.png',
+        to: './materials/'
+      }
     ])
   ]
 };

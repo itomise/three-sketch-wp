@@ -50,18 +50,4244 @@
 
 /* 1 */
 
-/* harmony import */
+// extracted by mini-css-extract-plugin
 
 /* 2 */
 
-// extracted by mini-css-extract-plugin
-
 /* 3 */
-
-/*#__PURE__*/
 
 /* 4 */
 
-/* 5 */
+// EXTERNAL MODULE: ./src/css/base.scss
 
-/* 6 */
+// CONCATENATED MODULE: ./node_modules/three/build/three.module.js
+
+// Polyfills
+
+// Missing in IE
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger
+
+//
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sign
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+
+/**
+ * https://github.com/mrdoob/eventdispatcher.js/
+ */
+
+/**
+ * @author alteredq / http://alteredqualia.com/
+ * @author mrdoob / http://mrdoob.com/
+ */
+
+// http://stackoverflow.com/questions/105034/how-to-create-a-guid-uuid-in-javascript/21963136#21963136
+
+// .toUpperCase() here flattens concatenated strings to save heap memory space.
+
+// compute euclidian modulo of m % n
+
+// https://en.wikipedia.org/wiki/Modulo_operation
+
+// Linear mapping from range <a1, a2> to range <b1, b2>
+
+// https://en.wikipedia.org/wiki/Linear_interpolation
+
+// http://en.wikipedia.org/wiki/Smoothstep
+
+// Random integer from <low, high> interval
+
+// Random float from <low, high> interval
+
+// Random float from <-range/2, range/2> interval
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author philogb / http://blog.thejit.org/
+ * @author egraether / http://egraether.com/
+ * @author zz85 / http://www.lab4games.net/zz85/blog
+ */
+
+/**
+ * @author mikael emtinger / http://gomo.se/
+ * @author alteredq / http://alteredqualia.com/
+ * @author WestLangley / http://github.com/WestLangley
+ * @author bhouston / http://clara.io
+ */
+
+// assumes min < max, componentwise
+
+// computes the angle in radians with respect to the positive x-axis
+
+// fuzz-free, array-based Quaternion SLERP operation
+
+// Skip the Slerp for tiny steps to avoid numeric problems:
+
+// Normalize in case we just did a lerp:
+
+// http://www.mathworks.com/matlabcentral/fileexchange/
+
+// 	20696-function-to-convert-between-dcm-euler-angles-quaternions-and-euler-vectors/
+
+//	content/SpinCalc.m
+
+// http://www.euclideanspace.com/maths/geometry/rotations/conversions/angleToQuaternion/index.htm
+
+// assumes axis is normalized
+
+// http://www.euclideanspace.com/maths/geometry/rotations/conversions/matrixToQuaternion/index.htm
+
+// assumes the upper 3x3 of m is a pure rotation matrix (i.e, unscaled)
+
+// assumes direction vectors vFrom and vTo are normalized
+
+// crossVectors( vFrom, vTo ); // inlined to avoid cyclic dependency on Vector3
+
+// quaternion is assumed to have unit length
+
+// from http://www.euclideanspace.com/maths/algebra/realNormedAlgebra/quaternions/code/index.htm
+
+// http://www.euclideanspace.com/maths/algebra/realNormedAlgebra/quaternions/slerp/
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author kile / http://kile.stravaganza.org/
+ * @author philogb / http://blog.thejit.org/
+ * @author mikael emtinger / http://gomo.se/
+ * @author egraether / http://egraether.com/
+ * @author WestLangley / http://github.com/WestLangley
+ */
+
+// calculate result * inverse quat
+
+// input: THREE.Matrix4 affine matrix
+
+// vector interpreted as a direction
+
+// TODO lengthSquared?
+
+// v cannot be the zero v
+
+// reflect incident vector off plane orthogonal to normal
+
+// normal is assumed to have unit length
+
+// clamp, to handle numerical problems
+
+/**
+ * @author alteredq / http://alteredqualia.com/
+ * @author WestLangley / http://github.com/WestLangley
+ * @author bhouston / http://clara.io
+ * @author tschw
+ */
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author alteredq / http://alteredqualia.com/
+ * @author szimek / https://github.com/szimek/
+ */
+
+// valid values: 1, 2, 4, 8 (see http://www.khronos.org/opengles/sdk/docs/man/xhtml/glPixelStorei.xml)
+
+// Values of encoding !== THREE.LinearEncoding only supported on map, envMap and emissiveMap.
+
+// Also changing the encoding after already used by a Material will not automatically make the Material
+
+// update. You need to explicitly call Material.needsUpdate to trigger it to recompile.
+
+/**
+ * @author supereggbert / http://www.paulbrunt.co.uk/
+ * @author philogb / http://blog.thejit.org/
+ * @author mikael emtinger / http://gomo.se/
+ * @author egraether / http://egraether.com/
+ * @author WestLangley / http://github.com/WestLangley
+ */
+
+/**
+ * @author szimek / https://github.com/szimek/
+ * @author alteredq / http://alteredqualia.com/
+ * @author Marius Kintel / https://github.com/kintel
+ */
+
+/*
+ In options, we can specify:
+ * Texture parameters for an auto-generated target texture
+ * depthBuffer/stencilBuffer: Booleans to indicate if we should generate these buffers
+*/
+
+/**
+ * @author Mugen87 / https://github.com/Mugen87
+ * @author Matt DesLauriers / @mattdesl
+ */
+
+// TODO: Move to THREE.Image
+
+// process array of images e.g. CubeTexture
+
+// process single image
+
+// http://www.euclideanspace.com/maths/geometry/rotations/conversions/quaternionToAngle/index.htm
+
+// q is assumed to be normalized
+
+// http://www.euclideanspace.com/maths/geometry/rotations/conversions/matrixToAngle/index.htm
+
+// margin to distinguish between 0 and 180 degrees
+
+// singularity found
+
+// first check for identity matrix which must have +1 for all terms
+
+// in leading diagonal and zero in other terms
+
+// this singularity is identity matrix so angle = 0
+
+// zero angle, arbitrary axis
+
+// otherwise this singularity is angle = 180
+
+// m11 is the largest diagonal term
+
+// m22 is the largest diagonal term
+
+// m33 is the largest diagonal term so base result on this
+
+// return 180 deg rotation
+
+// as we have reached here there are no singularities so we can handle normally
+
+// used to normalize
+
+// prevent divide by zero, should not happen if matrix is orthogonal and should be
+
+// caught by singularity test above, but I've left it in just in case
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author supereggbert / http://www.paulbrunt.co.uk/
+ * @author philogb / http://blog.thejit.org/
+ * @author jordi_ros / http://plattsoft.com
+ * @author D1plo1d / http://github.com/D1plo1d
+ * @author alteredq / http://alteredqualia.com/
+ * @author mikael emtinger / http://gomo.se/
+ * @author timknip / http://www.floorplanner.com/
+ * @author bhouston / http://clara.io
+ * @author WestLangley / http://github.com/WestLangley
+ */
+
+// this method does not support reflection matrices
+
+// bottom row
+
+// last column
+
+// eye and target are in the same position
+
+// up and z are parallel
+
+//TODO: make this more efficient
+
+//( based on http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/fourD/index.htm )
+
+// based on http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/fourD/index.htm
+
+// Based on http://www.gamedev.net/reference/articles/article1199.asp
+
+// scale the rotation part
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author WestLangley / http://github.com/WestLangley
+ * @author bhouston / http://clara.io
+ */
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ */
+
+// WARNING: this discards revolution information -bhouston
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author mikael emtinger / http://gomo.se/
+ * @author alteredq / http://alteredqualia.com/
+ * @author WestLangley / http://github.com/WestLangley
+ * @author elephantatwork / www.elephantatwork.ch
+ */
+
+// checked by the renderer
+
+// assumes q is normalized
+
+// rotate object on axis in object space
+
+// axis is assumed to be normalized
+
+// rotate object on axis in world space
+
+// method assumes no rotated parent
+
+// translate object by distance along axis in object space
+
+// This method does not support objects having non-uniformly-scaled parent(s)
+
+// adds object as a child of this, while maintaining the object's world transform
+
+// update children
+
+// meta is a string when called from JSON.stringify
+
+// meta is a hash used to collect geometries, materials.
+
+// not providing it implies that this is the root object
+
+// being serialized.
+
+// initialize meta obj
+
+// standard Object3D serialization
+
+// object specific properties
+
+// extract data from the cache hash
+
+// remove metadata on each item
+
+// and return as array
+
+/**
+ * @author bhouston / http://clara.io
+ * @author WestLangley / http://github.com/WestLangley
+ */
+
+// project the aabb onto the seperating axis
+
+// project all 3 vertices of the triangle onto the seperating axis
+
+// actual test, basically see if either of the most extreme of the triangle points intersects r
+
+// points of the projected triangle are outside the projected half-length of the aabb
+
+// the axis is seperating and we can exit
+
+// this is a more robust check for empty than ( volume <= 0 ) because volume can get positive with two negative axes
+
+// Computes the world-axis-aligned bounding box of an object (including its children),
+
+// accounting for both the object's, and children's, world transforms
+
+// This can potentially have a divide by zero if the box
+
+// has a size dimension of 0.
+
+// using 6 splitting planes to rule out intersections.
+
+// If that point is inside the sphere, the AABB and sphere intersect.
+
+// Find the point on the AABB closest to the sphere center.
+
+// We compute the minimum and maximum dot product values. If those values
+
+// are on the same side (back or front) of the plane, then there is no intersection.
+
+// compute box center and extents
+
+// translate triangle to aabb origin
+
+// compute edge vectors for triangle
+
+// test against axes that are given by cross product combinations of the edges of the triangle and the edges of the aabb
+
+// make an axis testing of each of the 3 sides of the aabb against each of the 3 sides of the triangle = 9 axis of separation
+
+// axis_ij = u_i x f_j (u0, u1, u2 = face normals of aabb = x,y,z axes vectors since aabb is axis aligned)
+
+// test 3 face normals from the aabb
+
+// finally testing the face normal of the triangle
+
+// use already existing triangle edge vectors here
+
+// ensure that if there is no overlap, the result is fully empty, not slightly empty with non-inf/+inf values that will cause subsequence intersects to erroneously return valid values.
+
+// transform of empty box is an empty box.
+
+// NOTE: I am using a binary pattern to specify all 2^3 combinations below
+
+// 000
+
+// 001
+
+// 010
+
+// 011
+
+// 100
+
+// 101
+
+// 110
+
+// 111
+
+/**
+ * @author bhouston / http://clara.io
+ * @author mrdoob / http://mrdoob.com/
+ */
+
+/**
+ * @author bhouston / http://clara.io
+ */
+
+// point behind the ray
+
+// from http://www.geometrictools.com/GTEngine/Include/Mathematics/GteDistRaySegment.h
+
+// It returns the min distance between the ray and the segment
+
+// defined by v0 and v1
+
+// It can also set two optional targets :
+
+// - The closest point on the ray
+
+// - The closest point on the segment
+
+// The ray and segment are not parallel.
+
+// region 0
+
+// Minimum at interior points of ray and segment.
+
+// region 1
+
+// region 5
+
+// region 4
+
+// region 3
+
+// region 2
+
+// Ray and segment are parallel.
+
+// t0 = first intersect point - entrance on front of sphere
+
+// test to see if both t0 and t1 are behind the ray - if so, return null
+
+// test to see if t0 is behind the ray:
+
+// if it is, the ray is inside the sphere, so return the second exit point scaled by t1,
+
+// in order to always return an intersect point that is in front of the ray.
+
+// line is coplanar, return origin
+
+// Null is preferable to undefined since undefined means.... it is undefined
+
+// Return if the ray never intersects the plane
+
+// check if the ray lies on the plane first
+
+// These lines also handle the case where tmin or tmax is NaN
+
+// (result of 0 * Infinity). x !== x returns true if x is NaN
+
+//return point closest to the ray (positive side)
+
+// Compute the offset origin, edges, and normal.
+
+// from http://www.geometrictools.com/GTEngine/Include/Mathematics/GteIntrRay3Triangle3.h
+
+// Solve Q + t*D = b1*E1 + b2*E2 (Q = kDiff, D = ray direction,
+
+// E1 = kEdge1, E2 = kEdge2, N = Cross(E1,E2)) by
+
+//   |Dot(D,N)|*b1 = sign(Dot(D,N))*Dot(D,Cross(Q,E2))
+
+//   |Dot(D,N)|*b2 = sign(Dot(D,N))*Dot(D,Cross(E1,Q))
+
+//   |Dot(D,N)|*t = -sign(Dot(D,N))*Dot(Q,N)
+
+// b1 < 0, no intersection
+
+// b2 < 0, no intersection
+
+// b1+b2 > 1, no intersection
+
+// Line intersects triangle, check if ray does.
+
+// t < 0, no intersection
+
+// Ray intersects triangle.
+
+// normal is assumed to be normalized
+
+// Q: should an error be thrown if normal is zero (e.g. degenerate plane)?
+
+// Note: will lead to a divide by zero if the plane is invalid.
+
+// Unsure if this is the correct method to handle this case.
+
+// Note: this tests if a line intersects the plane, not whether it (or its end-points) are coplanar with it.
+
+// static/instance method to calculate barycentric coordinates
+
+// based on: http://www.blackpawn.com/texts/pointinpoly/default.html
+
+// collinear or singular triangle
+
+// arbitrary location outside of triangle?
+
+// not sure if this is the best idea, maybe should be returning undefined
+
+// barycentric coordinates must always sum to 1
+
+// strictly front facing
+
+// algorithm thanks to Real-Time Collision Detection by Christer Ericson,
+
+// published by Morgan Kaufmann Publishers, (c) 2005 Elsevier Inc.,
+
+// under the accompanying license; see chapter 5.1.5 for detailed explanation.
+
+// basically, we're distinguishing which of the voronoi regions of the triangle
+
+// the point lies in with the minimum amount of redundant computation.
+
+// vertex region of A; barycentric coords (1, 0, 0)
+
+// vertex region of B; barycentric coords (0, 1, 0)
+
+// edge region of AB; barycentric coords (1-v, v, 0)
+
+// vertex region of C; barycentric coords (0, 0, 1)
+
+// edge region of AC; barycentric coords (1-w, 0, w)
+
+// edge region of BC; barycentric coords (0, 1-w, w)
+
+// edge region of BC
+
+// face region
+
+// u = va * denom
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author alteredq / http://alteredqualia.com/
+ */
+
+// h,s,l ranges are in 0.0 - 1.0
+
+// rgb / hsl
+
+// rgb(255,0,0) rgba(255,0,0,0.5)
+
+// rgb(100%,0%,0%) rgba(100%,0%,0%,0.5)
+
+// hsl(120,50%,50%) hsla(120,50%,50%,0.5)
+
+// hex color
+
+// #ff0
+
+// #ff0000
+
+// color keywords
+
+// red
+
+// unknown color
+
+// THREE.NoColors, THREE.VertexColors, THREE.FaceColors
+
+// override the renderer's default precision for this material
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author alteredq / http://alteredqualia.com/
+ *
+ * parameters = {
+ *  color: <hex>,
+ *  opacity: <float>,
+ *  map: new THREE.Texture( <Image> ),
+ *
+ *  lightMap: new THREE.Texture( <Image> ),
+ *  lightMapIntensity: <float>
+ *
+ *  aoMap: new THREE.Texture( <Image> ),
+ *  aoMapIntensity: <float>
+ *
+ *  specularMap: new THREE.Texture( <Image> ),
+ *
+ *  alphaMap: new THREE.Texture( <Image> ),
+ *
+ *  envMap: new THREE.CubeTexture( [posx, negx, posy, negy, posz, negz] ),
+ *  combine: THREE.Multiply,
+ *  reflectivity: <float>,
+ *  refractionRatio: <float>,
+ *
+ *  depthTest: <bool>,
+ *  depthWrite: <bool>,
+ *
+ *  wireframe: <boolean>,
+ *  wireframeLinewidth: <float>,
+ *
+ *  skinning: <bool>,
+ *  morphTargets: <bool>
+ * }
+ */
+
+// emissive
+
+// for backward compatability if shading is set in the constructor
+
+// standard Material serialization
+
+// TODO: Copied from Object3D.toJSON
+
+// Scale behind envMap
+
+// rotation (SpriteMaterial)
+
+// this.lineDistances = [];
+
+// update flags
+
+// materials
+
+// skins
+
+// morphs
+
+// BufferGeometry uses odd numbers as Id
+
+// rotate geometry around world x-axis
+
+// rotate geometry around world y-axis
+
+// rotate geometry around world z-axis
+
+// translate geometry
+
+// scale geometry
+
+// console.log( 'THREE.BufferGeometry.setFromObject(). Converting', object, this );
+
+// groups
+
+// skinning
+
+// process morph attributes if present
+
+// first, find the center of the bounding sphere
+
+// second, try to find a boundingSphere with a radius smaller than the
+
+// boundingSphere of the boundingBox: sqrt(3) smaller in the best case
+
+// backwards compatibility
+
+// reset existing normals to zero
+
+// indexed elements
+
+// non-indexed elements (unconnected triangle soup)
+
+// attributes
+
+// morph attributes
+
+// morphAttribute: array of Float32BufferAttributes
+
+// standard BufferGeometry serialization
+
+/*
+		 // Handle primitives
+
+		 var parameters = this.parameters;
+
+		 if ( parameters !== undefined ) {
+
+		 var values = [];
+
+		 for ( var key in parameters ) {
+
+		 values.push( parameters[ key ] );
+
+		 }
+
+		 var geometry = Object.create( this.constructor.prototype );
+		 this.constructor.apply( geometry, values );
+		 return geometry;
+
+		 }
+
+		 return new this.constructor().copy( this );
+		 */
+
+// reset
+
+// name
+
+// index
+
+// bounding box
+
+// bounding sphere
+
+// draw range
+
+// user data
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author alteredq / http://alteredqualia.com/
+ * @author mikael emtinger / http://gomo.se/
+ * @author jonobr1 / http://jonobr1.com/
+ */
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author kile / http://kile.stravaganza.org/
+ * @author alteredq / http://alteredqualia.com/
+ * @author mikael emtinger / http://gomo.se/
+ * @author zz85 / http://www.lab4games.net/zz85/blog
+ * @author bhouston / http://clara.io
+ */
+
+// Checking boundingSphere distance to ray
+
+// indexed buffer geometry
+
+// triangle number in indexed buffer semantics
+
+// non-indexed buffer geometry
+
+// triangle number in non-indexed buffer semantics
+
+// Geometry uses even numbers as Id
+
+// vertex normals weighted by triangle areas
+
+// http://www.iquilezles.org/www/articles/normals/normals.htm
+
+// save original normals
+
+// - create temp variables on first access
+
+//   otherwise just copy (for faster repeated calls)
+
+// use temp geometry to compute face and vertex normals for each morph
+
+// create on first access
+
+// set vertices to morph target
+
+// compute morph normals
+
+// restore original normals
+
+// vertices
+
+// colors
+
+// faces
+
+// uvs
+
+/*
+	 * Checks for duplicate vertices with hashmap.
+	 * Duplicated vertices are removed
+	 * and faces' vertices are updated.
+	 */
+
+// Hashmap for looking up vertices by position coordinates (and making sure they are unique)
+
+//console.log('Duplicate vertex found. ', i, ' could be using ', verticesMap[key]);
+
+// if faces are completely degenerate after merging vertices, we
+
+// have to remove them from the geometry.
+
+// if any duplicate vertices are found in a Face3
+
+// we have to remove the face as nothing can be saved
+
+// Use unique set of vertices
+
+// tag faces
+
+// sort faces
+
+// sort uvs
+
+// standard Geometry serialization
+
+// isQuad
+
+// temporal backward compatibility
+
+// face vertex uvs
+
+// morph targets
+
+// normals
+
+// morph normals
+
+// vertex normals
+
+// face normals
+
+// skin weights
+
+// skin indices
+
+// line distances
+
+// BoxBufferGeometry
+
+// segments
+
+// buffers
+
+// generate vertices, normals and uvs
+
+// set values to correct vector component
+
+// now apply vector to vertex buffer
+
+// now apply vector to normal buffer
+
+// counters
+
+// indices
+
+// 1. you need three indices to draw a single face
+
+// 2. a single segment consists of two faces
+
+// 3. so we need to generate six (2*3) indices per segment
+
+// increase counter
+
+// add a group to the geometry. this will ensure multi material support
+
+// calculate new start value for groups
+
+// update total number of vertices
+
+// build each side of the box geometry
+
+// px
+
+// nx
+
+// py
+
+// ny
+
+// pz
+
+// nz
+
+// build geometry
+
+/**
+ * Uniform Utilities
+ */
+
+// Legacy
+
+/**
+ * @author alteredq / http://alteredqualia.com/
+ *
+ * parameters = {
+ *  defines: { "label" : "value" },
+ *  uniforms: { "parameter1": { value: 1.0 }, "parameter2": { value2: 2 } },
+ *
+ *  fragmentShader: <string>,
+ *  vertexShader: <string>,
+ *
+ *  wireframe: <boolean>,
+ *  wireframeLinewidth: <float>,
+ *
+ *  lights: <bool>,
+ *
+ *  skinning: <bool>,
+ *  morphTargets: <bool>,
+ *  morphNormals: <bool>
+ * }
+ */
+
+// set to use scene fog
+
+// set to use scene lights
+
+// set to use user-defined clipping planes
+
+// set to use skinning attribute streams
+
+// set to use morph targets
+
+// set to use morph normals
+
+// set to use derivatives
+
+// set to use fragment depth values
+
+// set to use draw buffers
+
+// When rendered geometry doesn't include these attributes but the material does,
+
+// use these default values in WebGL. This avoids errors when buffer data is missing.
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author mikael emtinger / http://gomo.se/
+ * @author WestLangley / http://github.com/WestLangley
+*/
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author greggman / http://games.greggman.com/
+ * @author zz85 / http://www.lab4games.net/zz85/blog
+ * @author tschw
+ */
+
+// width of the film (default in millimeters)
+
+// horizontal film offset (same unit as gauge)
+
+/**
+	 * Sets the FOV by focal length in respect to the current .filmGauge.
+	 *
+	 * The default film gauge is 35, so that the focal length can be specified for
+	 * a 35mm (full frame) camera.
+	 *
+	 * Values for focal length and film gauge must have the same unit.
+	 */
+
+// see http://www.bobatkins.com/photography/technical/field_of_view.html
+
+/**
+	 * Calculates the focal length from the current .fov and .filmGauge.
+	 */
+
+// film not completely covered in portrait format (aspect < 1)
+
+// film not completely covered in landscape format (aspect > 1)
+
+/**
+	 * Sets an offset in a larger frustum. This is useful for multi-window or
+	 * multi-monitor/multi-machine setups.
+	 *
+	 * For example, if you have 3x2 monitors and each monitor is 1920x1080 and
+	 * the monitors are in grid like this
+	 *
+	 *   +---+---+---+
+	 *   | A | B | C |
+	 *   +---+---+---+
+	 *   | D | E | F |
+	 *   +---+---+---+
+	 *
+	 * then for each monitor you would call it like this
+	 *
+	 *   var w = 1920;
+	 *   var h = 1080;
+	 *   var fullWidth = w * 3;
+	 *   var fullHeight = h * 2;
+	 *
+	 *   --A--
+	 *   camera.setViewOffset( fullWidth, fullHeight, w * 0, h * 0, w, h );
+	 *   --B--
+	 *   camera.setViewOffset( fullWidth, fullHeight, w * 1, h * 0, w, h );
+	 *   --C--
+	 *   camera.setViewOffset( fullWidth, fullHeight, w * 2, h * 0, w, h );
+	 *   --D--
+	 *   camera.setViewOffset( fullWidth, fullHeight, w * 0, h * 1, w, h );
+	 *   --E--
+	 *   camera.setViewOffset( fullWidth, fullHeight, w * 1, h * 1, w, h );
+	 *   --F--
+	 *   camera.setViewOffset( fullWidth, fullHeight, w * 2, h * 1, w, h );
+	 *
+	 *   Note there is no reason monitors have to be the same size or in a grid.
+	 */
+
+/**
+ * Camera for rendering cube maps
+ *	- renders scene into axis-aligned cube
+ *
+ * @author alteredq / http://alteredqualia.com/
+ */
+
+/**
+ * @author alteredq / http://alteredqualia.com
+ * @author WestLangley / http://github.com/WestLangley
+ */
+
+/**
+ * @author alteredq / http://alteredqualia.com/
+ */
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author alteredq / http://alteredqualia.com/
+ * @author bhouston / http://clara.io
+ */
+
+// corner at max distance
+
+// TODO (abelnation): RectAreaLight BRDF data needs to be moved from example to main src
+
+/* -------------------------------------------------------------------------
+	//	Cube map shader
+	 ------------------------------------------------------------------------- */
+
+// Not using update ranges
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author Mugen87 / https://github.com/Mugen87
+ */
+
+// PlaneGeometry
+
+// PlaneBufferGeometry
+
+// Ignore background in AR
+
+// TODO: Reconsider this.
+
+// enable code injection for non-built-in material
+
+// push to the pre-sorted opaque render list
+
+/* eslint-disable no-undef */
+
+/* eslint-enable no-undef */
+
+/**
+ * @author tschw
+ */
+
+// enable state of previous frame - the clipping code has to
+
+// run another frame in order to reset the state:
+
+// there's no local clipping
+
+// there's no global clipping
+
+// ensure unique state
+
+/**
+ * @author Mugen87 / https://github.com/Mugen87
+ */
+
+// When object doesn't have morph target influences defined, we treat it as a 0-length array
+
+// This is important to make sure we set up morphTargetBaseInfluence / morphTargetInfluences
+
+// initialise list
+
+// Remove current morphAttributes
+
+// Collect influences
+
+// Add morphAttributes
+
+// GLSL shader uses formula baseinfluence * base + sum(target * influence)
+
+// This allows us to switch between absolute morphs and relative morphs without changing shader code
+
+// When baseinfluence = 1 - sum(influence), the above is equivalent to sum((target - base) * influence)
+
+// Update once per frame
+
+/**
+ * @author Takahiro https://github.com/takahirox
+ */
+
+/**
+ * @author Artur Trzesiok
+ */
+
+// We're going to add .setXXX() methods for setting properties later.
+
+// Users can still set in DataTexture3D directly.
+
+//	var texture = new THREE.DataTexture3D( data, width, height, depth );
+
+// 	texture.anisotropy = 16;
+
+// See #14839
+
+/**
+ * @author tschw
+ * @author Mugen87 / https://github.com/Mugen87
+ * @author mrdoob / http://mrdoob.com/
+ *
+ * Uniforms of a program.
+ * Those form a tree structure with a special top-level container for the root,
+ * which you get by calling 'new WebGLUniforms( gl, program )'.
+ *
+ *
+ * Properties of inner nodes including the top-level container:
+ *
+ * .seq - array of nested uniforms
+ * .map - nested uniforms by name
+ *
+ *
+ * Methods of all nodes except the top-level container:
+ *
+ * .setValue( gl, value, [textures] )
+ *
+ * 		uploads a uniform value(s)
+ *  	the 'textures' parameter is needed for sampler uniforms
+ *
+ *
+ * Static methods of the top-level container (textures factorizations):
+ *
+ * .upload( gl, seq, values, textures )
+ *
+ * 		sets uniforms in 'seq' to 'values[id].value'
+ *
+ * .seqWithValue( seq, values ) : filteredSeq
+ *
+ * 		filters 'seq' entries with corresponding entry in values
+ *
+ *
+ * Methods of the top-level container (textures factorizations):
+ *
+ * .setValue( gl, name, value, textures )
+ *
+ * 		sets uniform with  name 'name' to 'value'
+ *
+ * .setOptional( gl, obj, prop )
+ *
+ * 		like .set for an optional property of the object
+ *
+ */
+
+// Flattening for arrays of vectors and matrices
+
+// unoptimized: ! isNaN( firstElem )
+
+// see http://jacksondunstan.com/articles/983
+
+// Texture unit allocation
+
+// --- Setters ---
+
+// Note: Defining these methods externally, because they come in a bunch
+
+// and this way their names minify.
+
+// Single scalar
+
+// Single float vector (from flat array or THREE.VectorN)
+
+// Single matrix (from flat array or MatrixN)
+
+// Single texture (2D / Cube)
+
+// Integer / Boolean vectors or arrays thereof (always flat arrays)
+
+// Helper to pick the right setter for the singular case
+
+// Array of scalars
+
+// Array of vectors (flat or from THREE classes)
+
+// Array of matrices (flat or from THREE clases)
+
+// Array of textures (2D / Cube)
+
+// Helper to pick the right setter for a pure (bottom-level) array
+
+// --- Uniform Classes ---
+
+// FLOAT
+
+// _VEC2
+
+// _VEC3
+
+// _VEC4
+
+// _MAT2
+
+// _MAT3
+
+// _MAT4
+
+// SAMPLER_2D, SAMPLER_EXTERNAL_OES
+
+// SAMPLER_3D
+
+// SAMPLER_CUBE
+
+// SAMPLER_2D_ARRAY
+
+// INT, BOOL
+
+// SAMPLER_2D
+
+// SAMPLER_EXTERNAL_OES
+
+// INT_SAMPLER_2D
+
+// UNSIGNED_INT_SAMPLER_2D
+
+// INT_SAMPLER_CUBE
+
+// UNSIGNED_SAMPLER_CUBE
+
+// --- Top-level ---
+
+// Parser - builds up the property tree from the path strings
+
+// extracts
+
+// 	- the identifier (member name or array index)
+
+//  - followed by an optional right bracket (found when array index)
+
+//  - followed by an optional left bracket or dot (type of subscript)
+
+// Note: These portions can be read in a non-overlapping fashion and
+
+// allow straightforward parsing of the hierarchy that WebGL encodes
+
+// in the uniform names.
+
+// reset RegExp object, because of the early exit of a previous run
+
+// convert to integer
+
+// bare name or "pure" bottom-level array "[0]" suffix
+
+// step into inner node / create it in case it doesn't exist
+
+// Root Container
+
+// Static interface
+
+// note: always updating when .needsUpdate is undefined
+
+// --enable-privileged-webgl-extension
+
+// console.log( '**' + type + '**', gl.getExtension( 'WEBGL_debug_shaders' ).getTranslatedShaderSource( shader ) );
+
+// Resolve Includes
+
+// Unroll Loops
+
+// add '.0' if integer
+
+// this code is required here because it is used by the toneMapping() function defined below
+
+// this code is required here because it is used by the various encoding/decoding function defined below
+
+// GLSL 3.0 conversion
+
+// Multiview
+
+// check for link errors
+
+// Force a particular attribute to index 0.
+
+// programs with morphTargets displace position out of attribute 0
+
+// clean up
+
+// console.log( 'THREE.WebGLProgram: ACTIVE VERTEX ATTRIBUTE:', name, i );
+
+// free resource
+
+// default for when object is not specified
+
+// ( for example when prebuilding shader to be used with multiple objects )
+
+//  - leave some extra space for other uniforms
+
+//  - limit here is ANGLE's 254 max uniform vectors
+
+//    (up to 54 should be safe)
+
+// Check if code has been already compiled
+
+// Remove from unordered set
+
+// Free WebGL resources
+
+// Exposed for resource monitoring & error feedback via renderer.info:
+
+/**
+ * @author fordacious / fordacious.github.io
+ */
+
+// (a) intensity is the total visible light emitted
+
+//uniforms.color.copy( color ).multiplyScalar( intensity / ( light.width * light.height * Math.PI ) );
+
+// (b) intensity is the brightness of the light
+
+// extract local rotation of light to derive width/height half vectors
+
+// TODO (abelnation): RectAreaLight distance?
+
+// uniforms.distance = distance;
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author alteredq / http://alteredqualia.com/
+ * @author bhouston / https://clara.io
+ * @author WestLangley / http://github.com/WestLangley
+ *
+ * parameters = {
+ *
+ *  opacity: <float>,
+ *
+ *  map: new THREE.Texture( <Image> ),
+ *
+ *  alphaMap: new THREE.Texture( <Image> ),
+ *
+ *  displacementMap: new THREE.Texture( <Image> ),
+ *  displacementScale: <float>,
+ *  displacementBias: <float>,
+ *
+ *  wireframe: <boolean>,
+ *  wireframeLinewidth: <float>
+ * }
+ */
+
+/**
+ * @author WestLangley / http://github.com/WestLangley
+ *
+ * parameters = {
+ *
+ *  referencePosition: <float>,
+ *  nearDistance: <float>,
+ *  farDistance: <float>,
+ *
+ *  skinning: <bool>,
+ *  morphTargets: <bool>,
+ *
+ *  map: new THREE.Texture( <Image> ),
+ *
+ *  alphaMap: new THREE.Texture( <Image> ),
+ *
+ *  displacementMap: new THREE.Texture( <Image> ),
+ *  displacementScale: <float>,
+ *  displacementBias: <float>
+ *
+ * }
+ */
+
+// vertical pass
+
+// horizonal pass
+
+// in this case we need a unique material instance reflecting the
+
+// appropriate state
+
+// Set GL state for depth map.
+
+// render depth map
+
+// do blur pass for VSM
+
+// 4 is required to match default unpack alignment of 4.
+
+// init
+
+// custom blending
+
+// texture
+
+// Ignore any errors
+
+// Use OffscreenCanvas when available. Specially needed in web workers
+
+// handle case if texture exceeds max size
+
+// only perform resize if necessary
+
+// only perform resize for certain image types
+
+// cube textures can't reuse the same canvas
+
+// Note: Math.log( x ) * Math.LOG2E used instead of Math.log2( x ) which is not supported by IE11
+
+// Fallback filters for non-power-of-2 textures
+
+// Check the last frame we updated the VideoTexture
+
+// We assume images for cube map have the same size.
+
+// populate depth texture with dummy data
+
+// WebGL 2.0 requires signed internalformat for glTexImage2D
+
+// Depth stencil textures need the DEPTH_STENCIL internal format
+
+// (https://www.khronos.org/registry/webgl/extensions/WEBGL_depth_texture/)
+
+// The error INVALID_OPERATION is generated by texImage2D if format and internalformat are
+
+// DEPTH_STENCIL and type is not UNSIGNED_INT_24_8_WEBGL.
+
+// use manually created mipmaps if available
+
+// if there are no manual mipmaps
+
+// set 0 level mipmap and then use GL to generate other mipmap levels
+
+// regular Texture (image, video, canvas)
+
+// Render targets
+
+// Setup storage for target texture and bind it to correct framebuffer
+
+// Setup storage for internal depth/stencil buffers and bind to correct framebuffer
+
+// Setup resources for a Depth Texture for a FBO (needs an extension)
+
+// Setup GL resources for a non-texture depth buffer
+
+// upload an empty depth texture with framebuffer size
+
+// Set up GL resources for the render target
+
+// Setup framebuffer
+
+// Setup color buffer
+
+// Setup depth and stencil buffers
+
+// currently relying on the fact that WebGLRenderTargetCube.texture is a Texture and NOT a CubeTexture
+
+// TODO: unify these code paths
+
+// CompressedTexture can have Array in image :/
+
+// this function alone should take care of cube textures
+
+// assumed: texture property of THREE.WebGLRenderTargetCube
+
+/**
+ * @author thespite / http://www.twitter.com/thespite
+ */
+
+// WebGL2 formats.
+
+/**
+ * @author fernandojsg / http://fernandojsg.com
+ * @author Takahiro https://github.com/takahirox
+ */
+
+// Hack #15830
+
+// Assign inputSources to available controllers
+
+// Notify disconnected
+
+// Notify connected
+
+// framebufferScaleFactor = value;
+
+// update camera and its children
+
+/**
+	 * @author jsantell / https://www.jsantell.com/
+	 *
+	 * Assumes 2 cameras that are parallel and share an X-axis, and that
+	 * the cameras' projection and world matrices have already been set.
+	 * And that near and far planes are identical for both cameras.
+	 * Visualization of this technique: https://computergraphics.stackexchange.com/a/4765
+	 */
+
+// TODO: Better way to apply this offset?
+
+// Find the union of the frustum values of the cameras and scale
+
+// the values so that the near plane's position does not change in world space,
+
+// although must now be relative to the new union camera.
+
+// Animation Loop
+
+/**
+ * @author supereggbert / http://www.paulbrunt.co.uk/
+ * @author mrdoob / http://mrdoob.com/
+ * @author alteredq / http://alteredqualia.com/
+ * @author szimek / https://github.com/szimek/
+ * @author tschw
+ */
+
+// public properties
+
+// Debug configuration container
+
+/**
+		 * Enables error checking and reporting when shader programs are being compiled
+		 * @type {boolean}
+		 */
+
+// clearing
+
+// scene graph
+
+// user-defined clipping
+
+// physically based shading
+
+// for backwards compatibility
+
+// physical lights
+
+// tone mapping
+
+// internal properties
+
+// internal state cache
+
+// geometry and program caching
+
+// frustum
+
+// clipping
+
+// camera matrices cache
+
+// initialize
+
+// event listeners must be registered before WebGL context is created, see #12753
+
+// Some experimental-webgl implementations do not have getShaderPrecisionFormat
+
+// xr
+
+// shadow map
+
+// Events
+
+// Buffer deallocation
+
+// Buffer rendering
+
+// API
+
+// Clearing
+
+// renderBufferDirect second parameter used to be fog (could be null)
+
+// TODO Attribute may not be available on context restore
+
+// Compile
+
+// Not using Line*Material
+
+// new material
+
+// changed glsl or parameters
+
+// same glsl and uniform list
+
+// only rebuild uniform list
+
+// Computing cache key again as onBeforeCompile may have changed the shaders
+
+// store the light setup it was created for
+
+// wire up the material to this renderer's lighting state
+
+// we might want to call this function with some ClippingGroup
+
+// object instead of the material, once it becomes feasible
+
+// (#8465, #8379)
+
+// load material specific uniforms
+
+// (shader material also gets them for the sake of genericity)
+
+// lighting uniforms depend on the camera so enforce an update
+
+// now, in case this material supports lights - or later, when
+
+// the next material that does gets activated:
+
+// set to true on material change
+
+// skinning uniforms must be set even if material didn't change
+
+// auto-setting of texture unit for bone texture must go before other textures
+
+// not sure why, but otherwise weird things happen
+
+// layout (1 matrix = 4 pixels)
+
+//      RGBA RGBA RGBA RGBA (=> column1, column2, column3, column4)
+
+//  with  8x8  pixel texture max   16 bones * 4 pixels =  (8 * 8)
+
+//       16x16 pixel texture max   64 bones * 4 pixels = (16 * 16)
+
+//       32x32 pixel texture max  256 bones * 4 pixels = (32 * 32)
+
+//       64x64 pixel texture max 1024 bones * 4 pixels = (64 * 64)
+
+// 4 pixels needed for 1 matrix
+
+// 4 floats per RGBA pixel
+
+// copy current values
+
+// the current material requires lighting info
+
+// note: all lighting uniforms are always set correctly
+
+// they simply reference the renderer's state for their
+
+// values
+
+// use the current material's .needsUpdate flags to set
+
+// the GL state when required
+
+// refresh uniforms common to several materials
+
+// to prevent pow( 0.0, 0.0 )
+
+// also part of uniforms common
+
+// If uniforms are marked as clean, they don't need to be loaded to the GPU.
+
+// uv repeat and offset setting priorities
+
+// 1. color map
+
+// 2. alpha map
+
+// RectAreaLight Texture
+
+// TODO (mrdoob): Find a nicer implementation
+
+// common matrices
+
+// Uniforms (refresh uniforms objects)
+
+// don't flip CubeTexture envMaps, flip everything else:
+
+//  WebGLRenderTargetCube will be flipped for backwards compatibility
+
+//  WebGLRenderTargetCube.texture will be flipped because it's a Texture and NOT a CubeTexture
+
+// this check must be handled differently, or removed entirely, if WebGLRenderTargetCube uses a CubeTexture in the future
+
+//uniforms.envMap.value = material.envMap; // part of uniforms common
+
+// Rendering
+
+// reset caching for this frame
+
+// update scene graph
+
+// update camera matrices and frustum
+
+// render scene
+
+// opaque pass (front-to-back order)
+
+// transparent pass (back-to-front order)
+
+// Generate mipmap if we're using any kind of mipmap filtering
+
+// resolve multisample renderbuffers to a single-sample texture if necessary
+
+// Ensure depth buffer writing is enabled so it can be cleared on next render
+
+// _gl.finish();
+
+// the following if statement ensures valid read requests (no out-of-bounds pixels, see #8604)
+
+/**
+ * @author benaadams / https://twitter.com/ben_a_adams
+ */
+
+/**
+ * @author alteredq / http://alteredqualia.com/
+ *
+ * parameters = {
+ *  color: <hex>,
+ *  map: new THREE.Texture( <Image> ),
+ *  alphaMap: new THREE.Texture( <Image> ),
+ *  rotation: <float>,
+ *  sizeAttenuation: <bool>
+ * }
+ */
+
+// compute position in camera space
+
+// to check if rotation is not zero
+
+// transform to world space
+
+/**
+ * @author mikael emtinger / http://gomo.se/
+ * @author alteredq / http://alteredqualia.com/
+ * @author mrdoob / http://mrdoob.com/
+ */
+
+// check first triangle
+
+// check second triangle
+
+/**
+ * @author mikael emtinger / http://gomo.se/
+ * @author alteredq / http://alteredqualia.com/
+ * @author ikerr / http://verold.com
+ */
+
+/**
+ * @author mikael emtinger / http://gomo.se/
+ * @author alteredq / http://alteredqualia.com/
+ * @author michael guerrero / http://realitymeltdown.com
+ * @author ikerr / http://verold.com
+ */
+
+// use the supplied bone inverses or calculate the inverses
+
+// copy the bone array
+
+// recover the bind-time world matrices
+
+// compute the local matrices, positions, rotations and scales
+
+// flatten bone matrices to array
+
+// compute the offset between the current and the original transform
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author alteredq / http://alteredqualia.com/
+ *
+ * parameters = {
+ *  color: <hex>,
+ *  opacity: <float>,
+ *
+ *  linewidth: <float>,
+ *  linecap: "round",
+ *  linejoin: "round"
+ * }
+ */
+
+// calculate the world matrix for each instance
+
+// the mesh represents this single instance
+
+// process the result of raycast
+
+// we assume non-indexed geometry
+
+// What do we want? intersection point on the ray or on the segment??
+
+// point: raycaster.ray.at( distance ),
+
+/**
+ * @author mgreter / http://github.com/mgreter
+ */
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author alteredq / http://alteredqualia.com/
+ *
+ * parameters = {
+ *  color: <hex>,
+ *  opacity: <float>,
+ *  map: new THREE.Texture( <Image> ),
+ *  alphaMap: new THREE.Texture( <Image> ),
+ *
+ *  size: <float>,
+ *  sizeAttenuation: <bool>
+ *
+ *  morphTargets: <bool>
+ * }
+ */
+
+// no flipping for cube textures
+
+// (also flipping doesn't work for compressed textures )
+
+// can't generate mipmaps for compressed textures
+
+// mips must be embedded in DDS files
+
+/**
+ * @author Matt DesLauriers / @mattdesl
+ * @author atix / arthursilber.de
+ */
+
+// buffer
+
+// helper variables
+
+// different logic for Geometry and BufferGeometry
+
+// create a data structure that contains all edges without duplicates
+
+// sorting prevents duplicates
+
+// generate vertices
+
+// create a data structure that contains all eges without duplicates
+
+// indexed BufferGeometry
+
+// non-indexed BufferGeometry
+
+// three edges per triangle, an edge is represented as (index1, index2)
+
+// e.g. the first triangle has the following edges: (0,1),(1,2),(2,0)
+
+/**
+ * @author zz85 / https://github.com/zz85
+ * @author Mugen87 / https://github.com/Mugen87
+ *
+ * Parametric Surfaces Geometry
+ * based on the brilliant article by @prideout http://prideout.net/blog/?p=44
+ */
+
+// ParametricGeometry
+
+// ParametricBufferGeometry
+
+// vertex
+
+// normal
+
+// approximate tangent vectors via finite differences
+
+// cross product of tangent vectors returns surface normal
+
+// uv
+
+// generate indices
+
+// faces one and two
+
+/**
+ * @author clockworkgeek / https://github.com/clockworkgeek
+ * @author timothypratley / https://github.com/timothypratley
+ * @author WestLangley / http://github.com/WestLangley
+ * @author Mugen87 / https://github.com/Mugen87
+ */
+
+// PolyhedronGeometry
+
+// PolyhedronBufferGeometry
+
+// default buffer data
+
+// we use this multidimensional array as a data structure for creating the subdivision
+
+// construct all of the vertices for this subdivision
+
+// construct all of the faces
+
+// Angle around the Y axis, counter-clockwise when looking from above.
+
+// Angle above the XZ plane.
+
+// the subdivision creates the vertex buffer data
+
+// helper functions
+
+// iterate over all faces and apply a subdivison with the given detail value
+
+// get the vertices of the face
+
+// perform subdivision
+
+// all vertices should lie on a conceptual sphere with a given radius
+
+// iterate over the entire buffer and apply the radius to each vertex
+
+// finally, create the uv data
+
+// handle case when face straddles the seam, see #3269
+
+// uv data of a single face
+
+// 0.9 is somewhat arbitrary
+
+// build non-indexed geometry
+
+/**
+ * @author timothypratley / https://github.com/timothypratley
+ * @author Mugen87 / https://github.com/Mugen87
+ */
+
+// TetrahedronGeometry
+
+// TetrahedronBufferGeometry
+
+// OctahedronGeometry
+
+// OctahedronBufferGeometry
+
+// IcosahedronGeometry
+
+// IcosahedronBufferGeometry
+
+/**
+ * @author Abe Pazos / https://hamoid.com
+ * @author Mugen87 / https://github.com/Mugen87
+ */
+
+// DodecahedronGeometry
+
+// DodecahedronBufferGeometry
+
+// (±1, ±1, ±1)
+
+// (0, ±1/φ, ±φ)
+
+// (±1/φ, ±φ, 0)
+
+// (±φ, 0, ±1/φ)
+
+/**
+ * @author oosmoxiecode / https://github.com/oosmoxiecode
+ * @author WestLangley / https://github.com/WestLangley
+ * @author zz85 / https://github.com/zz85
+ * @author miningold / https://github.com/miningold
+ * @author jonobr1 / https://github.com/jonobr1
+ * @author Mugen87 / https://github.com/Mugen87
+ *
+ */
+
+// TubeGeometry
+
+// expose internals
+
+// create geometry
+
+// TubeBufferGeometry
+
+// we use getPointAt to sample evenly distributed points from the given path
+
+// retrieve corresponding normal and binormal
+
+// generate normals and vertices for the current segment
+
+// create buffer data
+
+// functions
+
+// if the geometry is not closed, generate the last row of vertices and normals
+
+// at the regular position on the given path
+
+// if the geometry is closed, duplicate the first row of vertices and normals (uvs will differ)
+
+// uvs are generated in a separate function.
+
+// this makes it easy compute correct values for closed geometries
+
+// finally create faces
+
+/**
+ * @author oosmoxiecode
+ * @author Mugen87 / https://github.com/Mugen87
+ *
+ * based on http://www.blackpawn.com/texts/pqtorus/
+ */
+
+// TorusKnotGeometry
+
+// TorusKnotBufferGeometry
+
+// the radian "u" is used to calculate the position on the torus curve of the current tubular segement
+
+// now we calculate two points. P1 is our current position on the curve, P2 is a little farther ahead.
+
+// these points are used to create a special "coordinate space", which is necessary to calculate the correct vertex positions
+
+// calculate orthonormal basis
+
+// normalize B, N. T can be ignored, we don't use it
+
+// now calculate the vertices. they are nothing more than an extrusion of the torus curve.
+
+// because we extrude a shape in the xy-plane, there is no need to calculate a z-value.
+
+// now calculate the final vertex position.
+
+// first we orient the extrusion with our basis vectos, then we add it to the current position on the curve
+
+// normal (P1 is always the center/origin of the extrusion, thus we can use it to calculate the normal)
+
+// this function calculates the current position on the torus curve
+
+/**
+ * @author oosmoxiecode
+ * @author mrdoob / http://mrdoob.com/
+ * @author Mugen87 / https://github.com/Mugen87
+ */
+
+// TorusGeometry
+
+// TorusBufferGeometry
+
+/**
+ * @author Mugen87 / https://github.com/Mugen87
+ * Port from https://github.com/mapbox/earcut (v2.1.5)
+ */
+
+// if the shape is not too simple, we'll use z-order curve hash later; calculate polygon bbox
+
+// link every hole into the outer loop, producing a single-ring polygon without holes
+
+// process holes from left to right
+
+// minX, minY and invSize are later used to transform coords into integers for z-order calculation
+
+// create a circular doubly linked list from polygon points in the specified winding order
+
+/**
+ * @author zz85 / http://www.lab4games.net/zz85/blog
+ */
+
+// eliminate colinear or duplicate points
+
+// main ear slicing loop which triangulates a polygon (given as a linked list)
+
+// interlink polygon nodes in z-order
+
+// Simon Tatham's linked list merge sort algorithm
+
+// http://www.chiark.greenend.org.uk/~sgtatham/algorithms/listsort.html
+
+// z-order of a point given coords and inverse of the longer side of data bbox
+
+// iterate through ears, slicing them one by one
+
+// cut off the triangle
+
+// skipping the next vertex leads to less sliver triangles
+
+// if we looped through the whole remaining polygon and can't find any more ears
+
+// try filtering points and slicing again
+
+// check whether a polygon node forms a valid ear with adjacent nodes
+
+// reflex, can't be an ear
+
+// now make sure we don't have other points inside the potential ear
+
+// triangle bbox; min & max are calculated like this for speed
+
+// look for points inside the triangle in both directions
+
+// z-order range for the current triangle bbox;
+
+// look for remaining points in decreasing z-order
+
+// look for remaining points in increasing z-order
+
+// go through all polygon nodes and cure small local self-intersections
+
+// remove two nodes involved
+
+// try splitting polygon into two and triangulate them independently
+
+// look for a valid diagonal that divides the polygon into two
+
+// split the polygon in two by the diagonal
+
+// filter colinear points around the cuts
+
+// run earcut on each half
+
+// find a bridge between vertices that connects hole with an outer ring and and link it
+
+// David Eberly's algorithm for finding a bridge between hole and outer polygon
+
+// find a segment intersected by a ray from the hole's leftmost point to the left;
+
+// segment's endpoint with lesser x will be potential connection point
+
+// hole touches outer segment; pick lower endpoint
+
+// look for points inside the triangle of hole point, segment intersection and endpoint;
+
+// if there are no points found, we have a valid connection;
+
+// otherwise choose the point of the minimum angle with the ray as connection point
+
+// coords are transformed into non-negative 15-bit integer range
+
+// find the leftmost node of a polygon ring
+
+// check if a point lies within a convex triangle
+
+// check if a diagonal between two polygon nodes is valid (lies in polygon interior)
+
+// check if a polygon diagonal intersects any polygon segments
+
+// check if a polygon diagonal is locally inside the polygon
+
+// check if the middle point of a polygon diagonal is inside the polygon
+
+// link two polygon vertices with a bridge; if the vertices belong to the same ring, it splits polygon into two;
+
+// if one belongs to the outer ring and another to a hole, it merges it into a single ring
+
+// signed area of a triangle
+
+// check if two points are equal
+
+// check if two segments intersect
+
+// create a node and optionally link it with previous one (in a circular doubly linked list)
+
+// vertex index in coordinates array
+
+// vertex coordinates
+
+// previous and next vertex nodes in a polygon ring
+
+// z-order curve value
+
+// previous and next nodes in z-order
+
+// indicates whether this is a steiner point
+
+// calculate area of the contour polygon
+
+// flat array of vertices like [ x0,y0, x1,y1, x2,y2, ... ]
+
+// final array of vertex indices like [ [ a,b,d ], [ b,c,d ] ]
+
+/**
+ * @author zz85 / http://www.lab4games.net/zz85/blog
+ *
+ * Creates extruded geometry from a path shape.
+ *
+ * parameters = {
+ *
+ *  curveSegments: <int>, // number of points on the curves
+ *  steps: <int>, // number of points for z-side extrusions / used for subdividing segments of extrude spline too
+ *  depth: <float>, // Depth to extrude the shape
+ *
+ *  bevelEnabled: <bool>, // turn on bevel
+ *  bevelThickness: <float>, // how deep into the original shape bevel goes
+ *  bevelSize: <float>, // how far from shape outline (including bevelOffset) is bevel
+ *  bevelOffset: <float>, // how far from shape outline does bevel start
+ *  bevelSegments: <int>, // number of bevel layers
+ *
+ *  extrudePath: <THREE.Curve> // curve to extrude shape along
+ *
+ *  UVGenerator: <Object> // object that provides UV generator functions
+ *
+ * }
+ */
+
+// ExtrudeGeometry
+
+// ExtrudeBufferGeometry
+
+// options
+
+// deprecated options
+
+// bevels not supported for path extrusion
+
+// SETUP TNB variables
+
+// TODO1 - have a .isClosed in spline?
+
+// console.log(splineTube, 'splineTube', splineTube.normals.length, 'steps', steps, 'extrudePts', extrudePts.length);
+
+// Safeguards if bevels are not enabled
+
+// looping of holes
+
+// Maybe we should also check if holes are in the opposite direction, just to be safe ...
+
+/* Vertices */
+
+// vertices has all points but contour has only points of circumference
+
+// Find directions for point movement
+
+// computes for inPt the corresponding point inPt' on a new contour
+
+//   shifted by 1 unit (length of normalized vector) to the left
+
+// if we walk along contour clockwise, this new contour is outside the old one
+
+// inPt' is the intersection of the two lines parallel to the two
+
+//  adjacent edges of inPt at a distance of 1 unit on the left side.
+
+// resulting translation vector for inPt
+
+// good reading for geometry algorithms (here: line-line intersection)
+
+// http://geomalgorithms.com/a05-_intersect-1.html
+
+// not collinear
+
+// length of vectors for normalizing
+
+// vector from inPt to intersection point
+
+// handle special case of collinear edges
+
+// assumes: opposite
+
+// console.log("Warning: lines are a straight sequence");
+
+// console.log("Warning: lines are a straight spike");
+
+//  (j)---(i)---(k)
+
+// console.log('i,j,k', i, j , k)
+
+// Loop bevelSegments, 1 for the front, 1 for the back
+
+// contract shape
+
+//for ( b = bevelSegments; b > 0; b -- ) {
+
+// expand holes
+
+// Back facing vertices
+
+// v( vert.x, vert.y + extrudePts[ 0 ].y, extrudePts[ 0 ].x );
+
+// Add stepped vertices...
+
+// Including front facing vertices
+
+// v( vert.x, vert.y + extrudePts[ s - 1 ].y, extrudePts[ s - 1 ].x );
+
+// Add bevel segments planes
+
+//for ( b = 1; b <= bevelSegments; b ++ ) {
+
+/* Faces */
+
+// Top and bottom faces
+
+//console.log('b', i,j, i-1, k,vertices.length);
+
+/////  Internal functions
+
+// steps + 1
+
+// Bottom faces
+
+// Top faces
+
+// Create faces for the z-sides of the shape
+
+// Sides faces
+
+//, true
+
+/**
+ * @author zz85 / http://www.lab4games.net/zz85/blog
+ * @author alteredq / http://alteredqualia.com/
+ *
+ * Text = 3D Text
+ *
+ * parameters = {
+ *  font: <THREE.Font>, // font
+ *
+ *  size: <float>, // size of the text
+ *  height: <float>, // thickness to extrude text
+ *  curveSegments: <int>, // number of points on the curves
+ *
+ *  bevelEnabled: <bool>, // turn on bevel
+ *  bevelThickness: <float>, // how deep into text bevel goes
+ *  bevelSize: <float>, // how far from text outline (including bevelOffset) is bevel
+ *  bevelOffset: <float> // how far from text outline does bevel start
+ * }
+ */
+
+// TextGeometry
+
+// TextBufferGeometry
+
+// translate parameters to ExtrudeGeometry API
+
+// defaults
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author benaadams / https://twitter.com/ben_a_adams
+ * @author Mugen87 / https://github.com/Mugen87
+ */
+
+// SphereGeometry
+
+// SphereBufferGeometry
+
+/**
+ * @author Kaleb Murphy
+ * @author Mugen87 / https://github.com/Mugen87
+ */
+
+// RingGeometry
+
+// RingBufferGeometry
+
+// values are generate from the inside of the ring to the outside
+
+// increase the radius for next row of vertices
+
+/**
+ * @author zz85 / https://github.com/zz85
+ * @author bhouston / http://clara.io
+ * @author Mugen87 / https://github.com/Mugen87
+ */
+
+// LatheGeometry
+
+// LatheBufferGeometry
+
+// clamp phiLength so it's in range of [ 0, 2PI ]
+
+// generate vertices and uvs
+
+// if the geometry is closed, we need to average the normals along the seam.
+
+// because the corresponding vertices are identical (but still have different UVs).
+
+// generate normals
+
+// this is the buffer offset for the last line of vertices
+
+// select the normal of the vertex in the first line
+
+// select the normal of the vertex in the last line
+
+// average normals
+
+// assign the new values to both normals
+
+/**
+ * @author jonobr1 / http://jonobr1.com
+ * @author Mugen87 / https://github.com/Mugen87
+ */
+
+// ShapeGeometry
+
+// ShapeBufferGeometry
+
+// allow single and array values for "shapes" parameter
+
+// enables MultiMaterial support
+
+// check direction of vertices
+
+// join vertices of inner and outer paths to a single array
+
+// vertices, normals, uvs
+
+// incides
+
+/**
+ * @author WestLangley / http://github.com/WestLangley
+ * @author Mugen87 / https://github.com/Mugen87
+ */
+
+// now create a data structure where each entry represents an edge with its adjoining faces
+
+// an edge is only rendered if the angle (in degrees) between the face normals of the adjoining faces exceeds this value. default = 1 degree.
+
+// CylinderGeometry
+
+// CylinderBufferGeometry
+
+// first we generate the center vertex data of the cap.
+
+// because the geometry needs one set of uvs per face,
+
+// we must generate a center vertex per face/segment
+
+// save the index of the first center vertex
+
+// increase index
+
+// save the index of the last center vertex
+
+// now we generate the surrounding vertices, normals and uvs
+
+// face top
+
+// face bottom
+
+// generate geometry
+
+// save index of vertex in respective row
+
+// now save vertices of the row in our index array
+
+// we use the index array to access the correct indices
+
+// update group counter
+
+/**
+ * @author abelnation / http://github.com/abelnation
+ */
+
+// ConeGeometry
+
+// ConeBufferGeometry
+
+/**
+ * @author benaadams / https://twitter.com/ben_a_adams
+ * @author Mugen87 / https://github.com/Mugen87
+ * @author hughes
+ */
+
+// CircleGeometry
+
+// CircleBufferGeometry
+
+// center point
+
+/*#__PURE__*/
+
+// BoxGeometry
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ *
+ * parameters = {
+ *  color: <THREE.Color>
+ * }
+ */
+
+/**
+ * @author WestLangley / http://github.com/WestLangley
+ *
+ * parameters = {
+ *  color: <hex>,
+ *  roughness: <float>,
+ *  metalness: <float>,
+ *  opacity: <float>,
+ *
+ *  map: new THREE.Texture( <Image> ),
+ *
+ *  lightMap: new THREE.Texture( <Image> ),
+ *  lightMapIntensity: <float>
+ *
+ *  aoMap: new THREE.Texture( <Image> ),
+ *  aoMapIntensity: <float>
+ *
+ *  emissive: <hex>,
+ *  emissiveIntensity: <float>
+ *  emissiveMap: new THREE.Texture( <Image> ),
+ *
+ *  bumpMap: new THREE.Texture( <Image> ),
+ *  bumpScale: <float>,
+ *
+ *  normalMap: new THREE.Texture( <Image> ),
+ *  normalMapType: THREE.TangentSpaceNormalMap,
+ *  normalScale: <Vector2>,
+ *
+ *  displacementMap: new THREE.Texture( <Image> ),
+ *  displacementScale: <float>,
+ *  displacementBias: <float>,
+ *
+ *  roughnessMap: new THREE.Texture( <Image> ),
+ *
+ *  metalnessMap: new THREE.Texture( <Image> ),
+ *
+ *  alphaMap: new THREE.Texture( <Image> ),
+ *
+ *  envMap: new THREE.CubeTexture( [posx, negx, posy, negy, posz, negz] ),
+ *  envMapIntensity: <float>
+ *
+ *  refractionRatio: <float>,
+ *
+ *  wireframe: <boolean>,
+ *  wireframeLinewidth: <float>,
+ *
+ *  skinning: <bool>,
+ *  morphTargets: <bool>,
+ *  morphNormals: <bool>
+ * }
+ */
+
+// diffuse
+
+/**
+ * @author WestLangley / http://github.com/WestLangley
+ *
+ * parameters = {
+ *  reflectivity: <float>
+ *  clearcoat: <float>
+ *  clearcoatRoughness: <float>
+ *
+ *  sheen: <Color>
+ *
+ *  clearcoatNormalScale: <Vector2>,
+ *  clearcoatNormalMap: new THREE.Texture( <Image> ),
+ * }
+ */
+
+// maps to F0 = 0.04
+
+// null will disable sheen bsdf
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author alteredq / http://alteredqualia.com/
+ *
+ * parameters = {
+ *  color: <hex>,
+ *  specular: <hex>,
+ *  shininess: <float>,
+ *  opacity: <float>,
+ *
+ *  map: new THREE.Texture( <Image> ),
+ *
+ *  lightMap: new THREE.Texture( <Image> ),
+ *  lightMapIntensity: <float>
+ *
+ *  aoMap: new THREE.Texture( <Image> ),
+ *  aoMapIntensity: <float>
+ *
+ *  emissive: <hex>,
+ *  emissiveIntensity: <float>
+ *  emissiveMap: new THREE.Texture( <Image> ),
+ *
+ *  bumpMap: new THREE.Texture( <Image> ),
+ *  bumpScale: <float>,
+ *
+ *  normalMap: new THREE.Texture( <Image> ),
+ *  normalMapType: THREE.TangentSpaceNormalMap,
+ *  normalScale: <Vector2>,
+ *
+ *  displacementMap: new THREE.Texture( <Image> ),
+ *  displacementScale: <float>,
+ *  displacementBias: <float>,
+ *
+ *  specularMap: new THREE.Texture( <Image> ),
+ *
+ *  alphaMap: new THREE.Texture( <Image> ),
+ *
+ *  envMap: new THREE.CubeTexture( [posx, negx, posy, negy, posz, negz] ),
+ *  combine: THREE.MultiplyOperation,
+ *  reflectivity: <float>,
+ *  refractionRatio: <float>,
+ *
+ *  wireframe: <boolean>,
+ *  wireframeLinewidth: <float>,
+ *
+ *  skinning: <bool>,
+ *  morphTargets: <bool>,
+ *  morphNormals: <bool>
+ * }
+ */
+
+/**
+ * @author takahirox / http://github.com/takahirox
+ *
+ * parameters = {
+ *  color: <hex>,
+ *  specular: <hex>,
+ *  shininess: <float>,
+ *
+ *  map: new THREE.Texture( <Image> ),
+ *  gradientMap: new THREE.Texture( <Image> ),
+ *
+ *  lightMap: new THREE.Texture( <Image> ),
+ *  lightMapIntensity: <float>
+ *
+ *  aoMap: new THREE.Texture( <Image> ),
+ *  aoMapIntensity: <float>
+ *
+ *  emissive: <hex>,
+ *  emissiveIntensity: <float>
+ *  emissiveMap: new THREE.Texture( <Image> ),
+ *
+ *  bumpMap: new THREE.Texture( <Image> ),
+ *  bumpScale: <float>,
+ *
+ *  normalMap: new THREE.Texture( <Image> ),
+ *  normalMapType: THREE.TangentSpaceNormalMap,
+ *  normalScale: <Vector2>,
+ *
+ *  displacementMap: new THREE.Texture( <Image> ),
+ *  displacementScale: <float>,
+ *  displacementBias: <float>,
+ *
+ *  specularMap: new THREE.Texture( <Image> ),
+ *
+ *  alphaMap: new THREE.Texture( <Image> ),
+ *
+ *  wireframe: <boolean>,
+ *  wireframeLinewidth: <float>,
+ *
+ *  skinning: <bool>,
+ *  morphTargets: <bool>,
+ *  morphNormals: <bool>
+ * }
+ */
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author WestLangley / http://github.com/WestLangley
+ *
+ * parameters = {
+ *  opacity: <float>,
+ *
+ *  bumpMap: new THREE.Texture( <Image> ),
+ *  bumpScale: <float>,
+ *
+ *  normalMap: new THREE.Texture( <Image> ),
+ *  normalMapType: THREE.TangentSpaceNormalMap,
+ *  normalScale: <Vector2>,
+ *
+ *  displacementMap: new THREE.Texture( <Image> ),
+ *  displacementScale: <float>,
+ *  displacementBias: <float>,
+ *
+ *  wireframe: <boolean>,
+ *  wireframeLinewidth: <float>
+ *
+ *  skinning: <bool>,
+ *  morphTargets: <bool>,
+ *  morphNormals: <bool>
+ * }
+ */
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author alteredq / http://alteredqualia.com/
+ *
+ * parameters = {
+ *  color: <hex>,
+ *  opacity: <float>,
+ *
+ *  map: new THREE.Texture( <Image> ),
+ *
+ *  lightMap: new THREE.Texture( <Image> ),
+ *  lightMapIntensity: <float>
+ *
+ *  aoMap: new THREE.Texture( <Image> ),
+ *  aoMapIntensity: <float>
+ *
+ *  emissive: <hex>,
+ *  emissiveIntensity: <float>
+ *  emissiveMap: new THREE.Texture( <Image> ),
+ *
+ *  specularMap: new THREE.Texture( <Image> ),
+ *
+ *  alphaMap: new THREE.Texture( <Image> ),
+ *
+ *  envMap: new THREE.CubeTexture( [posx, negx, posy, negy, posz, negz] ),
+ *  combine: THREE.Multiply,
+ *  reflectivity: <float>,
+ *  refractionRatio: <float>,
+ *
+ *  wireframe: <boolean>,
+ *  wireframeLinewidth: <float>,
+ *
+ *  skinning: <bool>,
+ *  morphTargets: <bool>,
+ *  morphNormals: <bool>
+ * }
+ */
+
+/**
+ * @author WestLangley / http://github.com/WestLangley
+ *
+ * parameters = {
+ *  color: <hex>,
+ *  opacity: <float>,
+ *
+ *  matcap: new THREE.Texture( <Image> ),
+ *
+ *  map: new THREE.Texture( <Image> ),
+ *
+ *  bumpMap: new THREE.Texture( <Image> ),
+ *  bumpScale: <float>,
+ *
+ *  normalMap: new THREE.Texture( <Image> ),
+ *  normalMapType: THREE.TangentSpaceNormalMap,
+ *  normalScale: <Vector2>,
+ *
+ *  displacementMap: new THREE.Texture( <Image> ),
+ *  displacementScale: <float>,
+ *  displacementBias: <float>,
+ *
+ *  alphaMap: new THREE.Texture( <Image> ),
+ *
+ *  skinning: <bool>,
+ *  morphTargets: <bool>,
+ *  morphNormals: <bool>
+ * }
+ */
+
+/**
+ * @author alteredq / http://alteredqualia.com/
+ *
+ * parameters = {
+ *  color: <hex>,
+ *  opacity: <float>,
+ *
+ *  linewidth: <float>,
+ *
+ *  scale: <float>,
+ *  dashSize: <float>,
+ *  gapSize: <float>
+ * }
+ */
+
+// same as Array.prototype.slice, but also works on typed arrays
+
+// converts an array to a specific type
+
+// let 'undefined' and 'null' pass
+
+// returns an array by which times and values can be sorted
+
+// uses the array previously returned by 'getKeyframeOrder' to sort data
+
+// function for parsing AOS keyframe formats
+
+// no data
+
+// ...assume THREE.Math-ish
+
+// otherwise push as-is
+
+// find minimum .times value across all tracks in the trimmed clip
+
+// shift all tracks such that clip begins at t=0
+
+/**
+ * @author tschw
+ * @author Ben Houston / http://clara.io/
+ * @author David Sarno / http://lighthaus.us/
+ */
+
+/**
+ * Abstract base class of interpolants over parametric samples.
+ *
+ * The parameter domain is one dimensional, typically the time or a path
+ * along a curve defined by the data.
+ *
+ * The sample values can have any dimensionality and derived classes may
+ * apply special interpretations to the data.
+ *
+ * This class provides the interval seek in a Template Method, deferring
+ * the actual interpolation to derived classes.
+ *
+ * Time complexity is O(1) for linear access crossing at most two points
+ * and O(log N) for random access, where N is the number of positions.
+ *
+ * References:
+ *
+ * 		http://www.oodesign.com/template-method-pattern.html
+ *
+ * @author tschw
+ */
+
+/**
+ * Fast and simple cubic spline interpolant.
+ *
+ * It was derived from a Hermitian construction setting the first derivative
+ * at each sample position to the linear slope between neighboring positions
+ * over their parameter interval.
+ *
+ * @author tschw
+ */
+
+/**
+ *
+ * Interpolant that evaluates to the sample value at the position preceeding
+ * the parameter.
+ *
+ * @author tschw
+ */
+
+/**
+ *
+ * A timed sequence of keyframes for a specific property.
+ *
+ *
+ * @author Ben Houston / http://clara.io/
+ * @author David Sarno / http://lighthaus.us/
+ * @author tschw
+ */
+
+// Static methods
+
+/**
+ *
+ * A Track of Boolean keyframe values.
+ *
+ *
+ * @author Ben Houston / http://clara.io/
+ * @author David Sarno / http://lighthaus.us/
+ * @author tschw
+ */
+
+/**
+ *
+ * A Track of keyframe values that represent color.
+ *
+ *
+ * @author Ben Houston / http://clara.io/
+ * @author David Sarno / http://lighthaus.us/
+ * @author tschw
+ */
+
+/**
+ *
+ * A Track of numeric keyframe values.
+ *
+ * @author Ben Houston / http://clara.io/
+ * @author David Sarno / http://lighthaus.us/
+ * @author tschw
+ */
+
+/**
+ * Spherical linear unit quaternion interpolant.
+ *
+ * @author tschw
+ */
+
+/**
+ *
+ * A Track of quaternion keyframe values.
+ *
+ * @author Ben Houston / http://clara.io/
+ * @author David Sarno / http://lighthaus.us/
+ * @author tschw
+ */
+
+/**
+ *
+ * A Track that interpolates Strings
+ *
+ *
+ * @author Ben Houston / http://clara.io/
+ * @author David Sarno / http://lighthaus.us/
+ * @author tschw
+ */
+
+/**
+ *
+ * A Track of vectored keyframe values.
+ *
+ *
+ * @author Ben Houston / http://clara.io/
+ * @author David Sarno / http://lighthaus.us/
+ * @author tschw
+ */
+
+/**
+ *
+ * Reusable set of Tracks that represent an animation.
+ *
+ * @author Ben Houston / http://clara.io/
+ * @author David Sarno / http://lighthaus.us/
+ */
+
+// this means it should figure out its duration by scanning the tracks
+
+// derived classes can define a static parse method
+
+//- See http://jsperf.com/comparison-to-undefined/3
+
+//- slower code:
+
+//-
+
+//- 				if ( t >= t1 || t1 === undefined ) {
+
+// after end
+
+// this loop
+
+// we have arrived at the sought interval
+
+// prepare binary search on the right side of the index
+
+//-					if ( t < t0 || t0 === undefined ) {
+
+// the interval is valid
+
+// looping?
+
+// + 1, using the scan for the details
+
+// linear reverse scan
+
+// before start
+
+// prepare binary search on the left side of the index
+
+// linear scan
+
+// binary search
+
+// check boundary cases, again
+
+// seek
+
+// validate_interval
+
+// optional, subclass-specific settings structure
+
+// Note: The indirection allows central control of many interpolants.
+
+// --- Protected interface
+
+// copies a sample value to the result buffer
+
+// Template methods for derived classes:
+
+// implementations shall return this.resultBuffer
+
+// empty
+
+//!\ DECLARE ALIAS AFTER assign prototype !
+
+//( 0, t, t0 ), returns this.resultBuffer
+
+//( N-1, tN-1, t ), returns this.resultBuffer
+
+// f'(t0) = 0
+
+// use the other end of the curve
+
+// ZeroCurvatureEnding
+
+// f''(t0) = 0 a.k.a. Natural Spline
+
+// f'(tN) = 0
+
+// f''(tN) = 0, a.k.a. Natural Spline
+
+// combine data linearly
+
+// evaluate polynomials
+
+/*, t0, t, t1 */
+
+// Serialization (in static context, because of constructor invocation
+
+// and automatic invocation of .toJSON):
+
+// derived classes can define a static toJSON method
+
+// by default, we assume the data can be serialized as-is
+
+// mandatory
+
+// fall back to default, unless the default itself is messed up
+
+// fatal, in this case
+
+// move all keyframes either forwards or backwards in time
+
+// scale all keyframe times by a factor (useful for frame <-> seconds conversions)
+
+// removes keyframes before and after animation without changing any values within the range [startTime, endTime].
+
+// IMPORTANT: We do not shift around keys to the start of the track time, because for interpolated keys this will change their values
+
+// inclusive -> exclusive bound
+
+// empty tracks are forbidden, so keep at least one keyframe
+
+// ensure we do not get a GarbageInGarbageOut situation, make sure tracks are at least minimally viable
+
+// removes equivalent sequential keys as common in morph target sequences
+
+// (0,0,0,0,1,1,1,0,0,0,0,0,0,0) --> (0,0,1,1,0,0)
+
+// remove adjacent keyframes scheduled at the same time
+
+// remove unnecessary keyframes same as their neighbors
+
+// in-place compaction
+
+// flush last keyframe (compaction looks ahead)
+
+// Interpolant argument to constructor is not saved, so copy the factory method directly.
+
+// ValueBufferType is inherited
+
+// if there is a key at the first frame, duplicate it as the
+
+// last frame as well for perfect loop.
+
+// sort morph target names into animation groups based
+
+// patterns like Walk_001, Walk_002, Run_001, Run_002
+
+// tested with https://regex101.com/ on trick sequences
+
+// such flamingo_flyA_003, flamingo_run1_003, crdeath0059
+
+// parse the animation.hierarchy format
+
+// only return track if there are actually keys.
+
+// empty keys are filtered out, so check again
+
+// skip empty tracks
+
+// process morph targets
+
+// figure out all morph targets used in this track
+
+// create a track for each morph target with all zero
+
+// morphTargetInfluences except for the keys in which
+
+// the morphTarget is named.
+
+// ...assume skeletal animation
+
+// console.log( 'THREE.Cache', 'Adding key:', key );
+
+// console.log( 'THREE.Cache', 'Checking key:', key );
+
+// Refer to #5689 for the reason why we don't set .onStart
+
+// in the constructor
+
+// see #17920
+
+/**
+ * @author bhouston / http://clara.io/
+ */
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ *
+ * Abstract Base class to block based textures loader (dds, pvr, ...)
+ *
+ * Sub classes have to implement the parse() method which will be used in load().
+ */
+
+/**
+ * @author Nikos M. / https://github.com/foo123/
+ *
+ * Abstract Base class to load generic binary textures formats (rgbe, hdr, ...)
+ *
+ * Sub classes have to implement the parse() method which will be used in load().
+ */
+
+/**
+ * @author zz85 / http://www.lab4games.net/zz85/blog
+ * Extensible curve object
+ *
+ * Some common of curve methods:
+ * .getPoint( t, optionalTarget ), .getTangent( t )
+ * .getPointAt( u, optionalTarget ), .getTangentAt( u )
+ * .getPoints(), .getSpacedPoints()
+ * .getLength()
+ * .updateArcLengths()
+ *
+ * This following curves inherit from THREE.Curve:
+ *
+ * -- 2D curves --
+ * THREE.ArcCurve
+ * THREE.CubicBezierCurve
+ * THREE.EllipseCurve
+ * THREE.LineCurve
+ * THREE.QuadraticBezierCurve
+ * THREE.SplineCurve
+ *
+ * -- 3D curves --
+ * THREE.CatmullRomCurve3
+ * THREE.CubicBezierCurve3
+ * THREE.LineCurve3
+ * THREE.QuadraticBezierCurve3
+ *
+ * A series of curves can be represented as a THREE.CurvePath.
+ *
+ **/
+
+/**************************************************************
+ *	Abstract Curve base class
+ **************************************************************/
+
+/**
+ * @author zz85 https://github.com/zz85
+ *
+ * Centripetal CatmullRom Curve - which is useful for avoiding
+ * cusps and self-intersections in non-uniform catmull rom curves.
+ * http://www.cemyuksel.com/research/catmullrom_param/catmullrom.pdf
+ *
+ * curve.type accepts centripetal(default), chordal and catmullrom
+ * curve.tension is used for catmullrom which defaults to 0.5
+ */
+
+/*
+Based on an optimized c++ solution in
+ - http://stackoverflow.com/questions/9489736/catmull-rom-curve-with-no-cusps-and-no-self-intersections/
+ - http://ideone.com/NoEbVM
+
+This CubicPoly class could be used for reusing some variables and calculations,
+but for three.js curve use, it could be possible inlined and flatten into a single function call
+which can be placed in CurveUtils.
+*/
+
+/*
+	 * Compute coefficients for a cubic polynomial
+	 *   p(s) = c0 + c1*s + c2*s^2 + c3*s^3
+	 * such that
+	 *   p(0) = x0, p(1) = x1
+	 *  and
+	 *   p'(0) = t0, p'(1) = t1.
+	 */
+
+// compute tangents when parameterized in [t1,t2]
+
+// rescale tangents for parametrization in [0,1]
+
+// Check if request is duplicate
+
+// Check for data: URI
+
+// Safari can not handle Data URIs through XMLHttpRequest so process manually
+
+// 'text' or other
+
+// Wait for next browser tick like standard XMLHttpRequest event dispatching does
+
+// Initialise array for duplicate requests
+
+// Some browsers return HTTP Status 0 when using non-http protocol
+
+// e.g. 'file://' or 'data://'. Handle as success.
+
+// Add to cache only on HTTP success, so that we do not cache
+
+// error response bodies as proper responses to requests.
+
+// compressed cubemap texture stored in a single DDS file
+
+// JPEGs can't have an alpha channel, so memory can be saved by storing them as RGB.
+
+// Virtual base class method to overwrite and implement in subclasses
+
+//	- t [0 .. 1]
+
+// Get point at relative position in curve according to arc length
+
+// - u [0 .. 1]
+
+// Get sequence of points using getPoint( t )
+
+// Get sequence of points using getPointAt( u )
+
+// Get total curve arc length
+
+// Get list of cumulative segment lengths
+
+// { sums: cache, sum: sum }; Sum is in the last element.
+
+// Given u ( 0 .. 1 ), get a t to find p. This gives you points which are equidistant
+
+// The targeted u distance value to get
+
+// binary search for the index with largest value smaller than target u distance
+
+// less likely to overflow, though probably not issue here, JS doesn't really have integers, all numbers are floats
+
+// DONE
+
+// we could get finer grain at lengths, or use simple interpolation between two points
+
+// Returns a unit vector tangent at t
+
+// In case any sub curve does not implement its tangent derivation,
+
+// 2 points a small delta apart will be used to find its gradient
+
+// which seems to give a reasonable approximation
+
+// Capping in case of danger
+
+// see http://www.cs.indiana.edu/pub/techreports/TR425.pdf
+
+// compute the tangent vectors for each segment on the curve
+
+// select an initial normal vector perpendicular to the first tangent vector,
+
+// and in the direction of the minimum tangent xyz component
+
+// compute the slowly-varying normal and binormal vectors for each segment on the curve
+
+// clamp for floating pt errors
+
+// if the curve is closed, postprocess the vectors so the first and last normal vectors are the same
+
+// twist a little...
+
+// ensures that deltaAngle is 0 .. 2 PI
+
+// Rotate the point about the center of the ellipse.
+
+/**
+ * @author zz85 / http://www.lab4games.net/zz85/blog
+ *
+ * Bezier Curves formulas obtained from
+ * http://en.wikipedia.org/wiki/Bézier_curve
+ */
+
+/* array of Vector2 */
+
+// 4 points
+
+// extrapolate first point
+
+// extrapolate last point
+
+// init Centripetal / Chordal Catmull-Rom
+
+// safety check for repeated points
+
+// Line curve is linear, so we can overwrite default getPointAt
+
+/**
+ * @author zz85 / http://www.lab4games.net/zz85/blog
+ *
+ **/
+
+/**************************************************************
+ *	Curved Path - a curve path is simply a array of connected
+ *  curves, but retains the api of a curve
+ **************************************************************/
+
+/**
+ * @author zz85 / http://www.lab4games.net/zz85/blog
+ * Creates free form 2d path using series of points, lines or curves.
+ **/
+
+/**
+ * @author zz85 / http://www.lab4games.net/zz85/blog
+ * Defines a 2d shape plane using paths.
+ **/
+
+// STEP 1 Create a path.
+
+// STEP 2 Turn path into shape.
+
+// STEP 3 ExtrudeGeometry takes in Shape/Shapes
+
+// STEP 3a - Extract points from each shape, turn to vertices
+
+// STEP 3b - Triangulate each shape, add faces.
+
+// intensity = power per solid angle.
+
+// ref: equation (17) from https://seblagarde.files.wordpress.com/2015/07/course_notes_moving_frostbite_to_pbr_v32.pdf
+
+// for physically correct lights, should be 2.
+
+// These viewports map a cube-map onto a 2D texture with the
+
+// following orientation:
+
+//  xzXZ
+
+//   y Y
+
+// X - Positive x direction
+
+// x - Negative x direction
+
+// Y - Positive y direction
+
+// y - Negative y direction
+
+// Z - Positive z direction
+
+// z - Negative z direction
+
+// positive X
+
+// negative X
+
+// positive Z
+
+// negative Z
+
+// positive Y
+
+// negative Y
+
+// ref: equation (15) from https://seblagarde.files.wordpress.com/2015/07/course_notes_moving_frostbite_to_pbr_v32.pdf
+
+/**
+ * @author alteredq / http://alteredqualia.com/
+ * @author arose / http://github.com/arose
+ */
+
+// Add a line curve if start and end of lines are not connected
+
+// To get accurate point with reference to
+
+// entire path distance at time t,
+
+// following has to be done:
+
+// 1. Length of each sub path have to be known
+
+// 2. Locate and identify type of curve
+
+// 3. Get t for the curve
+
+// 4. Return curve.getPointAt(t')
+
+// To think about boundaries points.
+
+// loop where sum != 0, sum > d , sum+1 <d
+
+// We cannot use the default THREE.Curve getPoint() with getLength() because in
+
+// THREE.Curve, getLength() depends on getPoint() but in THREE.CurvePath
+
+// getPoint() depends on getLength
+
+// cacheLengths must be recalculated.
+
+// Compute lengths and cache them
+
+// We cannot overwrite getLengths() because UtoT mapping uses it.
+
+// We use cache values if curves and cache array are same length
+
+// Get length of sub-curve
+
+// Push sums into cached array
+
+// ensures no consecutive points are duplicates
+
+// TODO consider referencing vectors instead of copying?
+
+/*Array of Vector*/
+
+// if a previous curve is present, attempt to join
+
+// get points of shape and holes (keypoints based on segments parameter)
+
+// Shader Material
+
+// Deprecated
+
+// THREE.FlatShading
+
+// for PointsMaterial
+
+// maps
+
+// Blender exporter used to export a scalar. See #7459
+
+/**
+ * @author Don McCurdy / https://www.donmccurdy.com
+ */
+
+// Workaround for IE11 pre KB2929437. See #11440
+
+// backwards compatible
+
+// This only works for built-in curves (e.g. CatmullRomCurve3).
+
+// User defined curves or instances of CurvePath will not be deserialized.
+
+// MultiMaterial
+
+// load array of images e.g CubeTexture
+
+// load single image
+
+/**
+ * @author thespite / http://clicktorelease.com/
+ */
+
+/**
+ * @author zz85 / http://www.lab4games.net/zz85/blog
+ * minimal class for proxing functions to Path. Replaces old "extractSubpaths()"
+ **/
+
+/**
+ * @author zz85 / http://www.lab4games.net/zz85/blog
+ * @author mrdoob / http://mrdoob.com/
+ */
+
+// moveTo
+
+// lineTo
+
+// quadraticCurveTo
+
+// bezierCurveTo
+
+// inPt on polygon contour => immediate success    or
+
+// toggling of inside/outside at every single! intersection point of an edge
+
+//  with the horizontal line through inPt, left of inPt
+
+//  not counting lowerY endpoints of edges and whole edges on that line
+
+// not parallel
+
+// inPt is on contour ?
+
+// continue;				// no intersection or edgeLowPt => doesn't count !!!
+
+// parallel or collinear
+
+// parallel
+
+// edge lies on the same horizontal line as inPt
+
+// inPt: Point on contour !
+
+// continue;
+
+// console.log("Holes first", holesFirst);
+
+// only Holes? -> probably all Shapes with wrong orientation
+
+// console.log("ambiguous: ", ambiguous);
+
+// console.log("to change: ", toChange);
+
+//console.log("shape", shapes);
+
+// see #13988
+
+/**
+ * @author Reece Aaron Lecrivain / http://reecenotes.com/
+ */
+
+/**
+ * @author bhouston / http://clara.io
+ * @author WestLangley / http://github.com/WestLangley
+ *
+ * Primary reference:
+ *   https://graphics.stanford.edu/papers/envmap/envmap.pdf
+ *
+ * Secondary reference:
+ *   https://www.ppsloan.org/publications/StupidSH36.pdf
+ */
+
+// 3-band SH defined by 9 coefficients
+
+/**
+ * @author WestLangley / http://github.com/WestLangley
+ *
+ * A LightProbe is a source of indirect-diffuse light
+ */
+
+/**
+ * @author WestLangley / http://github.com/WestLangley
+ */
+
+// without extra factor of PI in the shader, would be 2 / Math.sqrt( Math.PI );
+
+// Create a copy of the buffer. The `decodeAudioData` method
+
+// detaches the buffer when complete, preventing reuse.
+
+// get the radiance in the direction of the normal
+
+// target is a Vector3
+
+// normal is assumed to be unit length
+
+// band 0
+
+// band 1
+
+// band 2
+
+// get the irradiance (radiance convolved with cosine lobe) in the direction of the normal
+
+// https://graphics.stanford.edu/papers/envmap/envmap.pdf
+
+// ( π / 4 ) * 0.546274
+
+// π * 0.282095
+
+// ( 2 * π / 3 ) * 0.488603
+
+// ( π / 4 ) * 1.092548
+
+// ( π / 4 ) * 0.315392 * 3
+
+// evaluate the basis functions
+
+// shBasis is an Array[ 9 ]
+
+// data.sh = this.sh.toArray(); // todo
+
+// modifying colors not currently supported
+
+// modifying color not currently supported
+
+// Off-axis stereoscopic effect based on
+
+// http://paulbourke.net/stereographics/stereorender/
+
+// translate xOffset
+
+// for left eye
+
+// for right eye
+
+// see #10732
+
+// private
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author Reece Aaron Lecrivain / http://reecenotes.com/
+ */
+
+// code path for Chrome (see #14393)
+
+// only set detune when available
+
+/**
+ *
+ * Buffered scene graph property that allows weighted accumulation.
+ *
+ *
+ * @author Ben Houston / http://clara.io/
+ * @author David Sarno / http://lighthaus.us/
+ * @author tschw
+ */
+
+// layout: [ incoming | accu0 | accu1 | orig ]
+
+// interpolators can use .buffer as their .result
+
+// the data then goes to 'incoming'
+
+// 'accu0' and 'accu1' are used frame-interleaved for
+
+// the cumulative result and are compared to detect
+
+// changes
+
+// 'orig' stores the original state of the property
+
+// code path for Chrome and Firefox (see #14393)
+
+// accumulate data in the 'incoming' region into 'accu<i>'
+
+// note: happily accumulating nothing when weight = 0, the caller knows
+
+// the weight and shouldn't have made the call in the first place
+
+// accuN := incoming * weight
+
+// accuN := accuN + incoming * weight
+
+// apply the state of 'accu<i>' to the binding when accus differ
+
+// accuN := accuN + original * ( 1 - cumulativeWeight )
+
+// value has changed -> update scene graph
+
+// remember the state of the bound property and copy it to both accus
+
+// accu[0..1] := orig -- initially detect changes against the original
+
+// apply the state previously taken via 'saveOriginalState' to the binding
+
+// mix functions
+
+/**
+ *
+ * A reference to a real property in the scene graph.
+ *
+ *
+ * @author Ben Houston / http://clara.io/
+ * @author David Sarno / http://lighthaus.us/
+ * @author tschw
+ */
+
+// Characters [].:/ are reserved for track binding syntax.
+
+/**
+ *
+ * Action provided by AnimationMixer for scheduling clip playback on specific
+ * objects.
+ *
+ * @author Ben Houston / http://clara.io/
+ * @author David Sarno / http://lighthaus.us/
+ * @author tschw
+ *
+ */
+
+// bound by the mixer
+
+// inside: PropertyMixer (managed by the mixer)
+
+// for the memory manager
+
+// global mixer time when the action is to be started
+
+// it's set back to 'null' upon start of the action
+
+// scaled local time of the action
+
+// gets clamped or wrapped to 0..clip.duration according to loop
+
+// no. of repetitions when looping
+
+// true -> zero effective time scale
+
+// false -> zero effective weight
+
+// keep feeding the last frame?
+
+// for smooth interpolation w/o separate
+
+/**
+ *
+ * Player for AnimationClips.
+ *
+ *
+ * @author Ben Houston / http://clara.io/
+ * @author David Sarno / http://lighthaus.us/
+ * @author tschw
+ */
+
+// bind all binding
+
+// and only call .getValue on the first
+
+/**
+	 * Replaces spaces with underscores and removes unsupported characters from
+	 * node names, to ensure compatibility with parseTrackName().
+	 *
+	 * @param {string} name Node name to be sanitized.
+	 * @return {string}
+	 */
+
+// directoryName: matches[ 1 ], // (tschw) currently unused
+
+// required
+
+// Object names must be checked against a whitelist. Otherwise, there
+
+// is no way to parse 'foo.bar.baz': 'baz' must be a property, but
+
+// 'bar' could be the objectName, or part of a nodeName (which can
+
+// include '.' characters).
+
+// search into skeleton bones.
+
+// search into node subtree.
+
+// prototype, continued
+
+// these are used to "bind" a nonexistent property
+
+// Direct
+
+// EntireArray
+
+// ArrayElement
+
+// HasToFromArray
+
+// create getter / setter pair for a property in the scene graph
+
+// ensure there is a value node
+
+// set fail state so we can just 'return' on error
+
+// special cases were we need to reach deeper into the hierarchy to get the face materials....
+
+// potential future optimization: skip this if propertyIndex is already an integer
+
+// and convert the integer string to a true integer.
+
+// support resolving morphTarget names into indices.
+
+// resolve property
+
+// determine versioning scheme
+
+// material
+
+// node transform
+
+// determine how the property gets bound
+
+// access a sub element of the property array (only primitives are supported right now)
+
+// potential optimization, skip this if propertyIndex is already an integer, and convert the integer string to a true integer.
+
+// must use copy for Object3D.Euler/Quaternion
+
+// select getter / setter
+
+// back to the prototype version of getValue / setValue
+
+// note: avoiding to mutate the shape of 'this' via 'delete'
+
+// initial state of these methods that calls 'bind'
+
+/**
+ *
+ * A group of objects that receives a shared animation state.
+ *
+ * Usage:
+ *
+ *  - Add objects you would otherwise pass as 'root' to the
+ *    constructor or the .clipAction method of AnimationMixer.
+ *
+ *  - Instead pass this object as 'root'.
+ *
+ *  - You can also add and remove objects later when the mixer
+ *    is running.
+ *
+ * Note:
+ *
+ *    Objects of this class appear as one object to the mixer,
+ *    so cache control of the individual objects must be done
+ *    on the group.
+ *
+ * Limitation:
+ *
+ *  - The animated properties must be compatible among the
+ *    all objects in the group.
+ *
+ *  - A single property can either be controlled through a
+ *    target group or directly, but not both.
+ *
+ * @author tschw
+ */
+
+// cached objects followed by the active ones
+
+// threshold
+
+// note: read by PropertyBinding.Composite
+
+// for bookkeeping
+
+// inside: string
+
+// inside: { we don't care, here }
+
+// inside: Array< PropertyBinding >
+
+// inside: indices in these arrays
+
+// unknown object -> add it to the ACTIVE region
+
+// accounting is done, now do the same for all bindings
+
+// move existing object to the ACTIVE region
+
+// since we do not bother to create new bindings
+
+// for objects that are cached, the binding may
+
+// or may not exist
+
+// else the object is already where we want it to be
+
+// for arguments
+
+// move existing object into the CACHED region
+
+// remove & forget
+
+// object is cached, shrink the CACHED region
+
+// last cached object takes this object's place
+
+// last object goes to the activated slot and pop
+
+// object is active, just swap with the last and pop
+
+// cached or active
+
+// if object is known
+
+// Internal interface used by befriended PropertyBinding.Composite:
+
+// returns an array of bindings for the given path that is changed
+
+// according to the contained objects in the group
+
+// tells the group to forget about a property path and no longer
+
+// update the array previously obtained with 'subscribe_'
+
+// State & Scheduling
+
+// forget scheduling
+
+// restart clip
+
+// forget previous loops
+
+// return true when play has been called
+
+// Weight
+
+// set the weight stopping any scheduled fading
+
+// although .enabled = false yields an effective weight of zero, this
+
+// method does *not* change .enabled, because it would be confusing
+
+// note: same logic as when updated at runtime
+
+// return the weight considering fading and .enabled
+
+// Time Scale Control
+
+// set the time scale stopping any scheduled warping
+
+// although .paused = true yields an effective time scale of zero, this
+
+// method does *not* change .paused, because it would be confusing
+
+// return the time scale considering warping and .paused
+
+// Object Accessors
+
+// Interna
+
+// called by the mixer
+
+// check for scheduled start of action
+
+// yet to come / don't decide when delta = 0
+
+// start
+
+// unschedule
+
+// apply time scale and advance time
+
+// note: _updateTime may disable the action resulting in
+
+// an effective weight of 0
+
+// call ._updateWeight() to update ._effectiveWeight
+
+// faded out, disable
+
+// motion has halted, pause
+
+// warp done - apply final time scale
+
+// just started
+
+// repetitive Repeat or PingPong
+
+// when looping in reverse direction, the initial
+
+// transition through zero counts as a repetition,
+
+// so leave loopCount at -1
+
+// wrap around
+
+// signed
+
+// have to stop (switch state, clamp time, fire event)
+
+// keep running
+
+// entering the last round
+
+// invert time for the "pong round"
+
+// assuming for LoopOnce atStart == atEnd == true
+
+// existing binding, make sure the cache knows
+
+// this action has been forgotten by the cache, but the user
+
+// appears to be still using it -> rebind
+
+// increment reference counts / sort out state
+
+// decrement reference counts / sort out state
+
+// Memory manager
+
+// 'nActiveActions' followed by inactive ones
+
+// inside:
+
+// {
+
+// 	knownActions: Array< AnimationAction > - used as prototypes
+
+// 	actionByRoot: AnimationAction - lookup
+
+// }
+
+// 'nActiveBindings' followed by inactive ones
+
+// inside: Map< name, PropertyMixer >
+
+// same game as above
+
+// Memory management for AnimationAction objects
+
+// [ active actions |  inactive actions  ]
+
+// [  active actions >| inactive actions ]
+
+//                 s        a
+
+//                  <-swap->
+
+//                 a        s
+
+// [  active actions  | inactive actions ]
+
+// [ active actions |< inactive actions  ]
+
+//        a        s
+
+//         <-swap->
+
+//        s        a
+
+// Memory management for PropertyMixer objects
+
+// Memory management of Interpolants for weight and time scale
+
+// return an action for a clip optionally using a custom root target
+
+// object (this method allocates a lot of dynamic memory in case a
+
+// previously unknown clip/root combination is specified)
+
+// we know the clip, so we don't have to parse all
+
+// the bindings again but can just copy
+
+// also, take the clip from the prototype action
+
+// clip must be known when specified via string
+
+// allocate all resources required to run it
+
+// and make the action known to the memory manager
+
+// get an existing action
+
+// deactivates all previously scheduled actions
+
+// advance the time and update apply the animation
+
+// run active actions
+
+// Allows you to seek to a specific time in an animation.
+
+// Zero out time attribute for AnimationMixer object;
+
+// Zero out time attribute for all associated AnimationAction objects.
+
+// Update used to set exact time. Returns "this" AnimationMixer object.
+
+// return this mixer's root target object
+
+// free all resources specific to a particular clip
+
+// note: just calling _removeInactiveAction would mess up the
+
+// iteration state and also require updating the state we can
+
+// just throw away
+
+// free all resources specific to a particular root target object
+
+// remove a targeted clip from the cache
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author bhouston / http://clara.io/
+ * @author stephomi / http://stephaneginier.com/
+ */
+
+// direction is assumed to be normalized (for accurate distance calculations)
+
+// set origin in plane of camera
+
+/**
+ * @author bhouston / http://clara.io
+ * @author WestLangley / http://github.com/WestLangley
+ *
+ * Ref: https://en.wikipedia.org/wiki/Spherical_coordinate_system
+ *
+ * The polar angle (phi) is measured from the positive y-axis. The positive y-axis is up.
+ * The azimuthal angle (theta) is measured from the positive z-axis.
+ */
+
+// azimuthal angle
+
+// polar angle
+
+// restrict phi to be betwee EPS and PI-EPS
+
+/**
+ * @author Mugen87 / https://github.com/Mugen87
+ *
+ * Ref: https://en.wikipedia.org/wiki/Cylindrical_coordinate_system
+ *
+ */
+
+// height above the x-z plane
+
+// distance from the origin to a point in the x-z plane
+
+// counterclockwise angle in the x-z plane measured in radians from the positive z-axis
+
+// using 4 splitting planes to rule out intersections
+
+/**
+ * @author alteredq / http://alteredqualia.com/
+ * @author mrdoob / http://mrdoob.com/
+ * @author WestLangley / http://github.com/WestLangley
+ */
+
+/**
+ * @author Sean Griffin / http://twitter.com/sgrif
+ * @author Michael Guerrero / http://realitymeltdown.com
+ * @author mrdoob / http://mrdoob.com/
+ * @author ikerr / http://verold.com
+ * @author Mugen87 / https://github.com/Mugen87
+ */
+
+/*
+	var d = this.light.distance;
+
+	if ( d === 0.0 ) {
+
+		this.lightDistance.visible = false;
+
+	} else {
+
+		this.lightDistance.visible = true;
+		this.lightDistance.scale.set( d, d, d );
+
+	}
+	*/
+
+/**
+ * @author alteredq / http://alteredqualia.com/
+ * @author mrdoob / http://mrdoob.com/
+ * @author Mugen87 / https://github.com/Mugen87
+ */
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author Mugen87 / http://github.com/Mugen87
+ * @author Hectate / http://www.github.com/Hectate
+ */
+
+// create the radials
+
+// create the circles
+
+// first vertex
+
+// second vertex
+
+/**
+ * @author alteredq / http://alteredqualia.com/
+ * @author Mugen87 / https://github.com/Mugen87
+ *
+ *	- shows frustum, line of sight and up of the camera
+ *	- suitable for fast updates
+ * 	- based on frustum visualization in lightgl.js shadowmap example
+ *		http://evanw.github.com/lightgl.js/tests/shadowmap.html
+ */
+
+// near
+
+// far
+
+// sides
+
+// cone
+
+// up
+
+// target
+
+// cross
+
+/**
+ * @author mrdoob / http://mrdoob.com/
+ * @author Mugen87 / http://github.com/Mugen87
+ */
+
+// we need just camera projection matrix inverse
+
+// world matrix must be identity
+
+// center / target
+
+// sign does not matter
+
+// renderer flips side when determinant < 0; flipping not wanted here
+
+/**
+ * @author WestLangley / http://github.com/WestLangley
+ * @author zz85 / http://github.com/zz85
+ * @author bhouston / http://clara.io
+ *
+ * Creates an arrow for visualizing directions
+ *
+ * Parameters:
+ *  dir - Vector3
+ *  origin - Vector3
+ *  length - Number
+ *  color - color in hex value
+ *  headLength - Number
+ *  headWidth - Number
+ */
+
+// dir is assumed to be normalized
+
+/**
+ * @author sroucheray / http://sroucheray.org/
+ * @author mrdoob / http://mrdoob.com/
+ */
+
+// see #17458
+
+/**
+ * @author Emmett Lalish / elalish
+ *
+ * This class generates a Prefiltered, Mipmapped Radiance Environment Map
+ * (PMREM) from a cubeMap environment texture. This allows different levels of
+ * blur to be quickly accessed based on material roughness. It is packed into a
+ * special CubeUV format that allows us to perform custom interpolation so that
+ * we can support nonlinear formats such as RGBE. Unlike a traditional mipmap
+ * chain, it only goes down to the LOD_MIN level (above), and then creates extra
+ * even more filtered 'mips' at the same LOD_MIN resolution, associated with
+ * higher roughness levels. In this way we maintain resolution to smoothly
+ * interpolate diffuse lighting while limiting sampling computation.
+ */
+
+/**
+ * This is a two-pass Gaussian blur for a cubemap. Normally this is done
+ * vertically and horizontally, but this breaks down on a cube. Here we apply
+ * the blur latitudinally (around the poles), and then longitudinally (towards
+ * the poles) to approximate the orthogonally-separable blur. It is least
+ * accurate at the poles, but still does a decent job.
+ */
+
+// Number of standard deviations at which to cut off the discrete approximation.
+
+/**
+	 * Generates a PMREM from a supplied Scene, which can be faster than using an
+	 * image if networking bandwidth is low. Optional sigma specifies a blur radius
+	 * in radians to be applied to the scene before PMREM generation. Optional near
+	 * and far planes ensure the scene is rendered in its entirety (the cubeCamera
+	 * is placed at the origin).
+	 */
+
+// Convert linear to RGBE
+
+/**
+	 * Generates a PMREM from an equirectangular texture, which can be either LDR
+	 * (RGBFormat) or HDR (RGBEFormat). The ideal input image size is 1k (1024 x 512),
+	 * as this matches best with the 256 x 256 cubemap output.
+	 */
+
+/**
+	 * Generates a PMREM from an cubemap texture, which can be either LDR
+	 * (RGBFormat) or HDR (RGBEFormat). The ideal input cube size is 256 x 256,
+	 * as this matches best with the 256 x 256 cubemap output.
+	 */
+
+/**
+	 * Pre-compiles the cubemap shader. You can get faster start-up by invoking this method during
+	 * your texture's network fetch for increased concurrency.
+	 */
+
+/**
+	 * Pre-compiles the equirectangular shader. You can get faster start-up by invoking this method during
+	 * your texture's network fetch for increased concurrency.
+	 */
+
+/**
+	 * Disposes of the PMREMGenerator's internal memory. Note that PMREMGenerator is a static class,
+	 * so you should not need more than one PMREMGenerator object. If you do, calling dispose() on
+	 * one of them will cause any others to also become unusable.
+	 */
+
+// generate geometry from path points (for Line or Points objects)
+
+// generate geometry from equidistant sampling along the path
+
+/*, offset, length */
+
+// CONCATENATED MODULE: ./src/javascripts/cubemap.js
+
+// pingpong
+
+// CONCATENATED MODULE: ./src/javascripts/entry.js
+
+// import './bufferGeo'
+
+// import './maskSphere'
+
+// import './postProcess-trial01'
+
+// import './metaballs'
+
+// import './postProcess-trial02'
+
+// import './effectsStereo'
+
+// import './cameraArray'
+
+// import './intarakai01'
+
+// import './intarakai02'
+
+// pugをインポートする
+
+// background
