@@ -19,6 +19,26 @@ import './effectsStereo'
 
 // import './intarakai02'
 
+// import './cubemap'
+
+// import './intarakai03'
+
+// import './intarakai04'
+
+// import './itomise'
+
+// import './itomise01'
+
+// import './itomise02'
+
+// import './maskingPanda'
+
+// import './maskingPanda01'
+
+// import './maskPanda02'
+
+// import './postProcessingPixel'
+
 // pugをインポートする
 const req = require.context('../pug/', false, /\.pug/);
 req.keys().forEach((fileName) => {
