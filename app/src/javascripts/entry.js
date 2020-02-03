@@ -11,7 +11,7 @@ import '../css/base.scss'
 
 // import './postProcess-trial02'
 
-import './effectsStereo'
+// import './effectsStereo'
 
 // import './cameraArray'
 
@@ -31,7 +31,7 @@ import './effectsStereo'
 
 // import './itomise02'
 
-// import './maskingPanda'
+import './maskingPanda'
 
 // import './maskingPanda01'
 

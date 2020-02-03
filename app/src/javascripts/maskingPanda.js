@@ -54,8 +54,8 @@ class initial {
     // this.noiseSphere = new NoiseSphere(0, 0, 0)
     this.noiseSphere = new NoiseSphere(0, 0, 0)
     scene1.add( this.noiseSphere.mesh );
-    // var torus = new THREE.Mesh( new THREE.TorusBufferGeometry( 3, 1, 16, 32 ) );
-    // scene2.add( torus );
+    this.torus = new THREE.Mesh( new THREE.TorusBufferGeometry( 3, 1, 16, 32 ) );
+    scene2.add( this.torus );
     this.renderer = new THREE.WebGLRenderer();
     this.renderer.setClearColor( 0xe0e0e0 );
     this.renderer.setPixelRatio( window.devicePixelRatio );
@@ -102,7 +102,10 @@ class initial {
   animate() {
     requestAnimationFrame( this.animate.bind(this) );
     var time = performance.now() * 0.001;
-    // this.noiseSphere.draw()
+    this.noiseSphere.draw()
+
+    this.torus.rotation.x += 0.03
+    this.torus.rotation.y += 0.03
 
     this.renderer.clear();
     this.composer.render( time );
