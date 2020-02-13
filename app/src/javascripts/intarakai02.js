@@ -4,7 +4,7 @@
  */
 
 import * as THREE from 'three'
-import { gsap } from 'gsap' // eslint-disable-line
+import { gsap } from 'gsap'
 import { intarakai02Shader } from '../materials/intarakai02/Shader'
 
 import { RenderPass } from '../materials/postProcess01/RenderPass'

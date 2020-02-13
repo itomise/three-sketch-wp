@@ -9,7 +9,7 @@ var gl = canvas.getContext('webgl');
 var NUM_METABALLS = 9;
 var WIDTH = canvas.width;
 var HEIGHT = canvas.height;
-var frameCount = 0.0; // eslint-disable-line
+var frameCount = 0.0;
 
 /**
  * Shaders

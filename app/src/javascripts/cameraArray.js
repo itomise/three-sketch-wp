@@ -1,9 +1,9 @@
 import * as THREE from 'three';
-import { RenderPass } from '../materials/postProcess01/RenderPass' // eslint-disable-line
-import { ShaderPass } from '../materials/postProcess01/ShaderPass' // eslint-disable-line
-import { EffectComposer } from '../materials/postProcess01/EffectComposer' // eslint-disable-line
-import { DotScreenShader } from '../materials/postProcess01/DotScreenShader'// eslint-disable-line
-import { RGBShiftShader } from '../materials/postProcess01/RGBShiftShader'// eslint-disable-line
+import { RenderPass } from '../materials/postProcess01/RenderPass'
+import { ShaderPass } from '../materials/postProcess01/ShaderPass'
+import { EffectComposer } from '../materials/postProcess01/EffectComposer'
+import { DotScreenShader } from '../materials/postProcess01/DotScreenShader'
+import { RGBShiftShader } from '../materials/postProcess01/RGBShiftShader'
 
 
 var camera, scene, renderer;

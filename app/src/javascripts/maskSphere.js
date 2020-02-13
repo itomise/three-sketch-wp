@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const init = () => {
 
-  const sw = window.innerWidth // eslint-disable-line
-  const sh = window.innerHeight // eslint-disable-line
+  const sw = window.innerWidth
+  const sh = window.innerHeight
 
   // レンダラー
   _renderer = new THREE.WebGLRenderer()
@@ -179,8 +179,8 @@ const setupMask = () => {
 // ベースとなるシーン作成
 const setupBase = () => {
 
-  const sw = window.innerWidth; // eslint-disable-line
-  const sh = window.innerHeight; // eslint-disable-line
+  const sw = window.innerWidth;
+  const sh = window.innerHeight;
 
   // ベースとなるシーン
   _baseScene = new THREE.Scene();

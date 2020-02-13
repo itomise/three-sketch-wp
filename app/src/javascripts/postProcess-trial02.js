@@ -14,7 +14,7 @@ import { EffectComposer } from '../materials/postProcess01/EffectComposer'
 // カメラ、シーン等の宣言
 var camera, scene, renderer, composer;
 var object, light;
-var raycaster, mouse; // eslint-disable-line
+var raycaster, mouse;
 
 document.addEventListener('DOMContentLoaded', () => {
   init();

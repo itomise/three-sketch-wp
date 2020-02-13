@@ -80,7 +80,7 @@ const config = merge(baseConfig, {
 
 // entryにhot-middlewareを追加する
 for (const key in config.entry) {
-  if (config.entry.hasOwnProperty(key)) {  // eslint-disable-line
+  if (config.entry.hasOwnProperty(key)) {
     config.entry[key].unshift('webpack/hot/dev-server');
     config.entry[key].unshift('webpack-hot-middleware/client');
   }

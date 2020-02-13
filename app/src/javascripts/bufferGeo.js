@@ -106,18 +106,18 @@ const material = new THREE.RawShaderMaterial({
 const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
 
-const raycaster = new THREE.Raycaster() // eslint-disable-line
+const raycaster = new THREE.Raycaster()
 
 requestAnimationFrame(update)
 
-function update(frame) { // eslint-disable-line
+function update(frame) {
 
   renderer.setRenderTarget(null)
 
   raycaster.setFromCamera(mouse, camera);
 
   // // その光線とぶつかったオブジェクトを得る
-  // var intersects = raycaster.intersectObjects( scene.children ); // eslint-disable-line
+  // var intersects = raycaster.intersectObjects( scene.children );
 
   // if(intersects.length > 0){
   //   console.log('a')

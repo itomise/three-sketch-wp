@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-// import * as Orbitcontrols from 'three-orbitcontrols'; // eslint-disable-line
+// import * as Orbitcontrols from 'three-orbitcontrols';
 import {NoiseSphere} from '../materials/itomise/noiseSphere';
 
 window.addEventListener('load', () => { new Visual() })

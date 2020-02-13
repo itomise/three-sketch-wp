@@ -13,7 +13,7 @@ var container, camera, scene, renderer, effect;
 
 var spheres = [];
 
-var mouseX = 0, mouseY = 0; // eslint-disable-line
+var mouseX = 0, mouseY = 0;
 
 var windowHalfX = window.innerWidth / 2;
 var windowHalfY = window.innerHeight / 2;

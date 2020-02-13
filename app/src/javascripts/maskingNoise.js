@@ -5,35 +5,41 @@ import { TexturePass } from '../materials/postProcess01/TexturePass';
 import { ClearPass } from '../materials/postProcess01/ClearPass';
 import { MaskPass, ClearMaskPass } from '../materials/postProcess01/MaskPass';
 import { CopyShader } from '../materials/postProcess01/CopyShader';
-import panda from '../materials/masking/texture01.png'
-
+import panda from '../materials/masking/panda.png'
+import redTexture from '../materials/maskingNoise/texture_red.jpg'
+import blackTexture from '../materials/maskingNoise/texture_black.jpg'
+import yellowTexture from '../materials/maskingNoise/texture_yellow.jpg'
+import vertexShader from '../materials/maskingNoise/vertexShader.vert'
+import fragmentShader from '../materials/maskingNoise/fragmentShader.frag'
+import { MyNoiseShader } from '../materials/maskingNoise/MyNoiseShader'
 
 class NoiseSphere {
   constructor(x, y, z) {
-    this.geometry = new THREE.BoxBufferGeometry( 2, 2, 2, 2, 2, 2 )
-    this.material = new THREE.MeshBasicMaterial()
+    // this.geometry = new THREE.SphereBufferGeometry( 3.5, 60, 60 )
+    this.geometry = new THREE.BoxBufferGeometry(2,10,0,20,20,20)
+    this.uniforms = {
+      u_time: { type: 'f', value: 1.0 },
+      u_resolution: { type: 'v2', value: new THREE.Vector2() },
+      u_mouse: { type: 'v2', value: new THREE.Vector2() },
+    };
+    this.material = new THREE.ShaderMaterial({
+      uniforms: this.uniforms,
+      // vertexShader: vertexShader,
+      // fragmentShader: fragmentShader,
+      vertexShader: MyNoiseShader.vertexShader,
+      fragmentShader: MyNoiseShader.fragmentShader,
+      //blending: THREE.AdditiveBlending,
+      blending: THREE.NormalBlending,
+      transparent: false,
+      depthWrite: true,
+      side: THREE.DoubleSide
+    });
+    // this.material = new THREE.MeshBasicMaterial()
     this.mesh = new THREE.Mesh(this.geometry, this.material);
-
-    this.mesh.position.x = (Math.random() * 2 - 1) * 20
-    this.mesh.position.y = (Math.random() * 2 - 1) * 20
-    this.mesh.position.z = (Math.random() * 2 - 1) * 20 - 20
-
-    this.rotationValueX = Math.random() * 0.01
-    this.rotationValueY = Math.random() * 0.01
-    this.rotationValueZ = Math.random() * 0.01
-
-    this.positionValueX = Math.random() * 0.09
-    this.positionValueY = Math.random() * 0.09
-    this.positionValueZ = Math.random() * 0.09
   }
-  draw( time ) {
-    this.mesh.rotation.x += this.rotationValueX
-    this.mesh.rotation.y += this.rotationValueY
-    this.mesh.rotation.z += this.rotationValueZ
-
-    this.mesh.position.x += Math.sin( this.positionValueX + time + (this.positionValueX * 2) ) * this.positionValueX
-    this.mesh.position.y += Math.sin( this.positionValueY + time + (this.positionValueY * 2)) * this.positionValueY
-    this.mesh.position.z += Math.sin( this.positionValueZ + time + (this.positionValueZ * 2)) * this.positionValueZ
+  draw() {
+    this.uniforms.u_time.value += 0.05;
+    // console.log('a')
   }
 }
 
@@ -49,16 +55,11 @@ class initial {
   constructor() {
     this.camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 1000 );
     this.camera.position.z = 10;
-    this.mouse = new THREE.Vector2(0, 0)
     var scene1 = new THREE.Scene();
-    // var scene2 = new THREE.Scene();
+    var scene2 = new THREE.Scene();
     // this.noiseSphere = new NoiseSphere(0, 0, 0)
-    this.noiseSphere = []
-    for( let i = 0; i < 100; i++ ) {
-      this.noiseSphere[i] = new NoiseSphere()
-      scene1.add( this.noiseSphere[i].mesh );
-    }
-
+    this.noiseSphere = new NoiseSphere(0, 0, 0)
+    scene1.add( this.noiseSphere.mesh );
     // var torus = new THREE.Mesh( new THREE.TorusBufferGeometry( 3, 1, 16, 32 ) );
     // scene2.add( torus );
     this.renderer = new THREE.WebGLRenderer();
@@ -71,12 +72,12 @@ class initial {
     var clearPass = new ClearPass();
     var clearMaskPass = new ClearMaskPass();
     var maskPass1 = new MaskPass( scene1, this.camera );
-    // var maskPass2 = new MaskPass( scene2, this.camera );
-    var texture1 = new THREE.TextureLoader().load( panda );
+    var maskPass2 = new MaskPass( scene2, this.camera );
+    var texture1 = new THREE.TextureLoader().load( redTexture );
     texture1.minFilter = THREE.LinearFilter;
-    // var texture2 = new THREE.TextureLoader().load( panda );
+    var texture2 = new THREE.TextureLoader().load( blackTexture );
     var texturePass1 = new TexturePass( texture1 );
-    // var texturePass2 = new TexturePass( texture2 );
+    var texturePass2 = new TexturePass( texture2 );
     var outputPass = new ShaderPass( CopyShader );
     var parameters = {
       minFilter: THREE.LinearFilter,
@@ -90,13 +91,11 @@ class initial {
     this.composer.addPass( maskPass1 );
     this.composer.addPass( texturePass1 );
     this.composer.addPass( clearMaskPass );
-    // this.composer.addPass( maskPass2 );
-    // this.composer.addPass( texturePass2 );
-    // this.composer.addPass( clearMaskPass );
+    this.composer.addPass( maskPass2 );
+    this.composer.addPass( texturePass2 );
+    this.composer.addPass( clearMaskPass );
     this.composer.addPass( outputPass );
     window.addEventListener( 'resize', this.onWindowResize.bind(this), false );
-    window.addEventListener( 'mousemove', e => { this.mouseHandle( e ) }, false)
-    this.time = 0
   }
   onWindowResize() {
     var width = window.innerWidth;
@@ -108,29 +107,11 @@ class initial {
   }
   animate() {
     requestAnimationFrame( this.animate.bind(this) );
-    // var time = performance.now() * 0.001;
-    // this.noiseSphere.draw()
-
-    // this.noiseSphere.rotation.y += 0.01
-    // this.noiseSphere.rotation.x += 0.01
-    for ( let j = 0; j < this.noiseSphere.length; j++ ) {
-      this.noiseSphere[j].draw( this.time * this.noiseSphere[j].rotationValueX )
-    }
-
-    this.time += 0.01
+    var time = performance.now() * 0.001;
+    this.noiseSphere.draw()
 
     this.renderer.clear();
-    this.composer.render( );
+    this.composer.render( time );
   }
-
-  mouseHandle( e ) {
-    this.mouse.x = e.clientX
-    this.mouse.y = e.clientY
-    this.noiseSphere.rotation.x += 0.01
-    this.noiseSphere.rotation.y += 0.01
-    // console.log(this.mouse)
-  }
-
-
 
 }

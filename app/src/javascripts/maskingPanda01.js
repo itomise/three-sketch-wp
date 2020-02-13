@@ -1,17 +1,17 @@
 import * as THREE from 'three';
 import { EffectComposer } from '../materials/postProcess01/EffectComposer';
 import { ShaderPass } from '../materials/postProcess01/ShaderPass';
-import { TexturePass } from '../materials/postProcess01/TexturePass'; // eslint-disable-line
+import { TexturePass } from '../materials/postProcess01/TexturePass';
 import { ClearPass } from '../materials/postProcess01/ClearPass';
-import { MaskPass, ClearMaskPass } from '../materials/postProcess01/MaskPass'; // eslint-disable-line
+import { MaskPass, ClearMaskPass } from '../materials/postProcess01/MaskPass';
 import { CopyShader } from '../materials/postProcess01/CopyShader';
 import panda from '../materials/masking/panda.png'
 import vertexShader from '../materials/yurayuraShader/vertexShader.vert'
 import fragmentShader from '../materials/yurayuraShader/fragmentShader.frag'
 
 
-class NoiseSphere { //eslint-disable-line
-  constructor(x, y, z) { //eslint-disable-line
+class NoiseSphere {
+  constructor(x, y, z) {
     this.geometry = new THREE.SphereBufferGeometry( 3.5, 60, 60 )
     this.uniforms = {
       u_time: { type: 'f', value: 1.0 },

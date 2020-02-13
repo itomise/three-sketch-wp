@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 var camera, scene, renderer;
-var cube, sphere, torus, material; // eslint-disable-line
+var cube, sphere, torus, material;
 var count = 0, cubeCamera1, cubeCamera2;
 var onPointerDownPointerX, onPointerDownPointerY, onPointerDownLon, onPointerDownLat;
 var lon = 0, lat = 0;

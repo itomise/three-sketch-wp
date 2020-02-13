@@ -1,5 +1,5 @@
 const path = require('path');
-const CopyPlugin = require('copy-webpack-plugin'); // eslint-disable-line
+const CopyPlugin = require('copy-webpack-plugin');
 
 // ルートディレクトリの設定  - - - - - - - - - - - - - - - - - - - - -
 

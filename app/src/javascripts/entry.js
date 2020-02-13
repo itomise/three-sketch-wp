@@ -31,13 +31,15 @@ import '../css/base.scss'
 
 // import './itomise02'
 
-import './maskingPanda'
+// import './maskingPanda'
 
 // import './maskingPanda01'
 
 // import './maskPanda02'
 
 // import './postProcessingPixel'
+
+import './maskingNoise'
 
 // pugをインポートする
 const req = require.context('../pug/', false, /\.pug/);

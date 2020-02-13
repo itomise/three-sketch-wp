@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import * as Orbitcontrols from 'three-orbitcontrols'; // eslint-disable-line
+import * as Orbitcontrols from 'three-orbitcontrols';
 import {NoiseSphere} from '../materials/itomise02/noiseSphere';
 import { Clock } from 'three';
 
@@ -102,7 +102,7 @@ class Visual {
     requestAnimationFrame( this.animate.bind(this) )
 
     this.raycaster.setFromCamera(this.mouse, this.camera)
-    const intersects = this.raycaster.intersectObjects( this.scene.children ) // eslint-disable-line
+    const intersects = this.raycaster.intersectObjects( this.scene.children )
 
     // if(intersects.length) {
       this.noiseSphere.draw();
