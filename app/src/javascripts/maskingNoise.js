@@ -5,13 +5,17 @@ import { TexturePass } from '../materials/postProcess01/TexturePass';
 import { ClearPass } from '../materials/postProcess01/ClearPass';
 import { MaskPass, ClearMaskPass } from '../materials/postProcess01/MaskPass';
 import { CopyShader } from '../materials/postProcess01/CopyShader';
+import { RenderPass } from '../materials/postProcess01/RenderPass'
 import panda from '../materials/masking/panda.png'
 import redTexture from '../materials/maskingNoise/texture_red.jpg'
+import whiteTexture from '../materials/maskingNoise/texture_white.jpg'
 import blackTexture from '../materials/maskingNoise/texture_black.jpg'
 import yellowTexture from '../materials/maskingNoise/texture_yellow.jpg'
+import dotTexture from '../materials/maskingNoise/texture_dot.jpg'
 import vertexShader from '../materials/maskingNoise/vertexShader.vert'
 import fragmentShader from '../materials/maskingNoise/fragmentShader.frag'
 import { MyNoiseShader } from '../materials/maskingNoise/MyNoiseShader'
+import GLTFLoader from 'three-gltf-loader'
 
 class NoiseSphere {
   constructor(x, y, z) {
@@ -70,30 +74,76 @@ class initial {
 
     // this.noiseSphere = new NoiseSphere(0, 0, 0)
 
+    const objectsNumber1 = 100
+    const objectsNumber2 = 100
+    const objectsNumber3 = 20
+
+    // ====== scene1 =======
+    var scene0 = new THREE.Scene();
+    this.scene0Objects = [];
+    for (let i=0; i < 30; i++) {
+      const x = (Math.random() * 2 - 1) * 9
+      const y = (Math.random() * 2 - 1) * 5
+      const z = (Math.random() * 2 - 1) * 5
+      this.scene0Objects.push( new NoiseSphere(x, y, z))
+    }
+
+    this.scene0Objects.forEach( s => {
+      scene0.add(s.mesh)
+    })
+
     // ====== scene1 =======
     var scene1 = new THREE.Scene();
-    this.noiseSphere = [ new NoiseSphere(0, 0, 0), new NoiseSphere(5, 0, 2)]
+    this.scene1Objects = [];
+    for (let i=0; i < objectsNumber1; i++) {
+      const x = (Math.random() * 2 - 1) * 9
+      const y = (Math.random() * 2 - 1) * 5
+      const z = (Math.random() * 2 - 1) * 5
+      this.scene1Objects.push( new NoiseSphere(x, y, z))
+    }
 
-    this.noiseSphere.forEach( s => {
+    this.scene1Objects.forEach( s => {
       scene1.add(s.mesh)
     })
 
 
     // ====== scene2 =======
     var scene2 = new THREE.Scene();
-    this.sn2Ob = [ new NoiseSphere(0,1,2), new NoiseSphere(2.0,6)]
-    this.sn2Ob.forEach(s => {
+    this.scene2Objects = [];
+    for (let i=0; i < objectsNumber2; i++) {
+      const x = (Math.random() * 2 - 1) * 9
+      const y = (Math.random() * 2 - 1) * 5
+      const z = (Math.random() * 2 - 1) * 5
+      this.scene2Objects.push( new NoiseSphere(x, y, z))
+    }
+
+    this.scene2Objects.forEach( s => {
       scene2.add(s.mesh)
     })
 
 
     // ====== scene3 =======
     var scene3 = new THREE.Scene();
-    this.sn3Ob = [ new NoiseSphere(-1, -2, 0), new NoiseSphere(0,-5, 0)]
-    this.sn3Ob.forEach( s => {
+    this.scene3Objects = []
+    for (let i=0; i < objectsNumber3; i++) {
+      const x = (Math.random() * 2 - 1) * 9
+      const y = (Math.random() * 2 - 1) * 5
+      const z = (Math.random() * 2 - 1) * 5
+      this.scene3Objects.push( new NoiseSphere(x, y, z))
+    }
+
+    this.scene3Objects.forEach( s => {
       scene3.add(s.mesh)
     })
 
+    // ====== scene4 ======= (heart)
+    var scene4 = new THREE.Scene()
+    const loader = new GLTFLoader()
+    loader.load( './public/materials/heart.glb', data => {
+      const gltf = data
+      this.heart = gltf.scene
+      scene4.add(this.heart)
+    })
 
 
     // var torus = new THREE.Mesh( new THREE.TorusBufferGeometry( 3, 1, 16, 32 ) );
@@ -107,13 +157,17 @@ class initial {
     //
     var clearPass = new ClearPass();
     var clearMaskPass = new ClearMaskPass();
+    var maskPass0 = new MaskPass( scene0, this.camera );
     var maskPass1 = new MaskPass( scene1, this.camera );
     var maskPass2 = new MaskPass( scene2, this.camera );
     var maskPass3 = new MaskPass( scene3, this.camera );
+    var maskPass4 = new MaskPass( scene4, this.camera );
+    var texture0 = new THREE.TextureLoader().load( whiteTexture );
     var texture1 = new THREE.TextureLoader().load( redTexture );
     texture1.minFilter = THREE.LinearFilter;
     var texture2 = new THREE.TextureLoader().load( blackTexture );
     var texture3 = new THREE.TextureLoader().load( yellowTexture );
+    var texturePass0 = new TexturePass( texture0 );
     var texturePass1 = new TexturePass( texture1 );
     var texturePass2 = new TexturePass( texture2 );
     var texturePass3 = new TexturePass( texture3 );
@@ -126,17 +180,34 @@ class initial {
     };
     var renderTarget = new THREE.WebGLRenderTarget( window.innerWidth, window.innerHeight, parameters );
     this.composer = new EffectComposer( this.renderer, renderTarget );
+
     this.composer.addPass( clearPass );
-    this.composer.addPass( maskPass1 );
+
+    this.composer.addPass( maskPass0 );
     this.composer.addPass( texturePass1 );
+
+    this.composer.addPass( clearMaskPass );
+    this.composer.addPass( maskPass1 );
+    this.composer.addPass( texturePass0 );
+
     this.composer.addPass( clearMaskPass );
     this.composer.addPass( maskPass2 );
     this.composer.addPass( texturePass2 );
+
     this.composer.addPass( clearMaskPass );
     this.composer.addPass( maskPass3 );
     this.composer.addPass( texturePass3 );
+
+    this.composer.addPass( clearMaskPass );
+    this.composer.addPass( maskPass4 );
+    this.composer.addPass( texturePass1 );
+
     this.composer.addPass( clearMaskPass );
     this.composer.addPass( outputPass );
+
+    this.count = 0
+
+
     window.addEventListener( 'resize', this.onWindowResize.bind(this), false );
   }
   onWindowResize() {
@@ -150,15 +221,24 @@ class initial {
   animate() {
     requestAnimationFrame( this.animate.bind(this) );
     var time = performance.now() * 0.001;
-    this.noiseSphere.forEach(s => {
+    this.scene0Objects.forEach(s => {
       s.draw()
     })
-    this.sn2Ob.forEach( s => {
+    this.scene1Objects.forEach(s => {
       s.draw()
     })
-    this.sn3Ob.forEach( s => {
+    this.scene2Objects.forEach( s => {
       s.draw()
     })
+    this.scene3Objects.forEach( s => {
+      s.draw()
+    })
+    this.heart.rotation.x += 0.02
+    this.heart.rotation.z += 0.01
+    this.heart.scale.x += Math.sin(this.count* 0.09) * 0.006
+    this.heart.scale.y += Math.sin(this.count* 0.09) * 0.006
+    this.heart.scale.z += Math.sin(this.count* 0.09) * 0.006
+    this.count++
 
     this.renderer.clear();
     this.composer.render( time );

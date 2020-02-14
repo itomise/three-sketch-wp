@@ -12,6 +12,7 @@
     "postprocessing": "^6.9.0",
     "reset-css": "^4.0.1",
     "three": "^0.112.0",
+    "three-gltf-loader": "^1.111.0",
     "three-orbitcontrols": "^2.110.3"
   },
   "devDependencies": {

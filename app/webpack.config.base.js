@@ -92,6 +92,12 @@ const webpack_config = {
         from: './src/materials/cubemap/texture.png',
         to: './materials/'
       }
+    ]),
+    new CopyPlugin([
+      {
+        from: './src/materials/maskingNoise/heart.glb',
+        to: './materials/'
+      }
     ])
   ]
 };
